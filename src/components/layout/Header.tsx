@@ -27,7 +27,7 @@ export default function Header() {
   }, []);
 
   const headerClasses = cn(
-    'sticky top-0 z-50 w-full transition-all duration-300',
+    'fixed top-0 z-50 w-full transition-all duration-300',
     isHome && !isScrolled ? 'bg-transparent' : 'bg-white shadow-md'
   );
 
