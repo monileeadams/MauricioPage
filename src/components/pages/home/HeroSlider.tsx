@@ -5,7 +5,6 @@ import Image from "next/image"
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
 import useEmblaCarousel from 'embla-carousel-react'
-import Fade from 'embla-carousel-fade'
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 
@@ -14,15 +13,14 @@ export default function HeroSlider() {
 
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: false }),
-    Fade()
   ]);
 
   return (
     <section className="relative h-[85vh] w-full text-white">
       <div className="overflow-hidden h-full" ref={emblaRef}>
-        <div className="embla__container h-full">
+        <div className="flex h-full">
           {heroImages.map((heroImage, index) => (
-            <div key={heroImage.id} className="embla__slide relative h-full">
+            <div key={heroImage.id} className="relative h-full flex-[0_0_100%]">
                <Image
                   src={heroImage.imageUrl}
                   alt={heroImage.description}
