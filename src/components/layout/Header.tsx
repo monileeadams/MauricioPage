@@ -23,19 +23,17 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const isTransparent = !isScrolled && pathname === '/';
-
   return (
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
-        isTransparent ? 'bg-transparent' : 'bg-white/80 shadow-md backdrop-blur-sm'
+        isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-white'
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Film className={cn('h-8 w-8', isTransparent ? 'text-white' : 'text-foreground')} />
-          <span className={cn('font-headline text-2xl font-bold', isTransparent ? 'text-white' : 'text-foreground')}>
+          <Film className='h-8 w-8 text-foreground' />
+          <span className='font-headline text-2xl font-bold text-foreground'>
             Terra Vision
           </span>
         </Link>
@@ -46,7 +44,7 @@ export default function Header() {
               href={link.href}
               className={cn(
                 'font-medium transition-colors hover:text-accent',
-                pathname === link.href ? 'text-accent' : (isTransparent ? 'text-white' : 'text-foreground')
+                pathname === link.href ? 'text-accent' : 'text-foreground'
               )}
             >
               {link.label}
@@ -56,7 +54,7 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className={cn(isTransparent ? 'text-white hover:bg-white/20' : 'text-foreground')}>
+              <Button variant="ghost" size="icon" className='text-foreground'>
                 <Menu />
               </Button>
             </SheetTrigger>
