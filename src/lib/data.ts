@@ -1,0 +1,158 @@
+import type { NavLink, SocialLink, Service, Project, Post, GalleryImage, Achievement } from './types';
+import { Facebook, Instagram, Linkedin, Vimeo } from 'lucide-react';
+import { TheatreIcon } from '@/components/icons';
+
+export const siteConfig = {
+  name: 'Terra Vision',
+  url: 'https://terravision.example.com',
+  ogImage: 'https://terravision.example.com/og.jpg',
+  description: 'Producción audiovisual y consultoría ambiental por Mauricio De la Maza-Benignos.',
+  links: {
+    twitter: 'https://twitter.com/example',
+    github: 'https://github.com/example/terravision',
+  },
+};
+
+export const navLinks: NavLink[] = [
+  { href: '/', label: 'Inicio' },
+  { href: '/nosotros', label: 'Nosotros' },
+  { href: '/servicios', label: 'Servicios' },
+  { href: '/galerias', label: 'Galerías' },
+  { href: '/revista', label: 'Revista' },
+  { href: '/contacto', label: 'Contacto' },
+];
+
+export const socialLinks: SocialLink[] = [
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Instagram', href: '#', icon: Instagram },
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Vimeo', href: '#', icon: Vimeo },
+];
+
+export const biography = {
+  short: "Productor audiovisual, consultor ambiental y cineasta.",
+  full: "Mauricio De la Maza-Benignos es un reconocido productor audiovisual, consultor ambiental y cineasta con una profunda pasión por la naturaleza y la conservación. Su trabajo se centra en destacar la importancia de la conservación ambiental a través del arte cinematográfico y la consultoría especializada. Con una carrera que abarca más de dos décadas, ha dirigido y producido numerosos documentales premiados que exploran la biodiversidad de México y los desafíos que enfrenta. Su enfoque combina una rigurosa investigación científica con una narrativa visual cautivadora para crear historias que inspiran a la acción y fomentan una mayor conciencia sobre nuestro planeta. Además de su trabajo cinematográfico, Mauricio es un respetado consultor, brindando asesoría estratégica a organizaciones no gubernamentales y agencias gubernamentales en temas de desarrollo sustentable, conservación de ecosistemas y política ambiental. Su compromiso con la educación y la divulgación lo ha llevado a participar como ponente en conferencias internacionales y a impartir talleres sobre cine de naturaleza y activismo ambiental."
+};
+
+export const services = [
+  {
+    title: 'Producción Audiovisual',
+    summary: 'Documentales, videos institucionales y contenido digital con enfoque en naturaleza y conservación.',
+    details: [
+        {
+            title: "Producción de Contenido",
+            description: "Creamos contenido audiovisual de alto impacto para diversas plataformas.",
+            items: [
+                "Documentales de naturaleza y conservación",
+                "Videos institucionales y corporativos",
+                "Contenido para redes sociales (cápsulas, reels, etc.)",
+                "Producción para televisión y plataformas de streaming",
+                "Proyectos especiales en colaboración con productoras como BBC Nature",
+                "Largometrajes y cortometrajes documentales"
+            ]
+        }
+    ]
+  },
+  {
+    title: 'Fotografía',
+    summary: 'Capturamos la esencia de la naturaleza, eventos y proyectos con una visión artística y profesional.',
+     details: [
+        {
+            title: "Servicios Fotográficos",
+            description: "Cobertura fotográfica profesional para una variedad de necesidades.",
+            items: [
+                "Fotografía de naturaleza y vida silvestre",
+                "Fotografía de eventos corporativos y conferencias",
+                "Fotografía institucional y de producto",
+                "Retratos profesionales y de equipo",
+                "Cobertura de expediciones científicas y de aventura"
+            ]
+        }
+    ]
+  },
+  {
+    title: 'Cultura',
+    summary: 'Fomentamos la cultura ambiental a través de festivales, talleres y eventos educativos.',
+    details: [
+        {
+            title: "Gestión y Educación Cultural",
+            description: "Diseñamos y ejecutamos proyectos que fusionan cultura y medio ambiente.",
+            items: [
+                "Curaduría y organización de festivales de cine ambiental",
+                "Talleres de cine de naturaleza y conservación para jóvenes y adultos",
+                "Conferencias y charlas motivacionales sobre medio ambiente y cine",
+                "Desarrollo de eventos culturales con enfoque ambiental para empresas e instituciones",
+                "Proyectos educativos y de divulgación científica a través del arte"
+            ]
+        }
+    ]
+  },
+  {
+    title: 'Consultoría',
+    summary: 'Asesoría experta en conservación, desarrollo sustentable y gestión de proyectos ambientales.',
+    details: [
+        {
+            title: "Asesoría Ambiental Estratégica",
+            description: "Ofrecemos soluciones expertas para los desafíos ambientales contemporáneos.",
+            items: [
+                "Consultoría en desarrollo sustentable y políticas públicas",
+                "Asesoría en conservación de ecosistemas y biodiversidad",
+                "Análisis legal y normativo en materia ambiental",
+                "Planificación estratégica para organizaciones de la sociedad civil (ONGs)",
+                "Evaluación de impacto ambiental y social de proyectos",
+                "Gestión de proyectos de conservación y recaudación de fondos"
+            ]
+        }
+    ]
+  },
+];
+
+export const projects: Project[] = [
+    { id: 'proj-1', title: 'Conservación del Lobo Mexicano', imageId: 'project-1', category: 'Proyectos' },
+    { id: 'proj-2', title: 'Desierto Chihuahuense: Un Universo Oculto', imageId: 'project-2', category: 'Proyectos' },
+    { id: 'proj-3', title: 'Festival de Cine PanterFest', imageId: 'project-3', category: 'Eventos' },
+    { id: 'proj-4', title: 'Estrategia de Conservación Hídrica', imageId: 'project-4', category: 'Consultoría' },
+];
+
+export const posts: Post[] = [
+    { id: 'post-1', title: 'El Arte de Filmar en el Silencio del Desierto', date: '15 de Julio, 2024', excerpt: 'Narra la experiencia y los desafíos de la producción de nuestro último documental en el Desierto de Samalayuca.', content: 'Contenido completo...', imageId: 'blog-1', category: 'Cine Ambiental' },
+    { id: 'post-2', title: 'La Importancia de los Corredores Biológicos', date: '02 de Julio, 2024', excerpt: 'Un análisis sobre cómo la conectividad de los ecosistemas es vital para la supervivencia de especies como el jaguar.', content: 'Contenido completo...', imageId: 'blog-2', category: 'Conservación' },
+    { id: 'post-3', title: 'Anuncio: Nuevo Proyecto Sobre Arrecifes Mexicanos', date: '20 de Junio, 2024', excerpt: 'Estamos emocionados de anunciar nuestra próxima gran producción, que nos llevará a las profundidades del Caribe Mexicano.', content: 'Contenido completo...', imageId: 'blog-3', category: 'Proyectos' },
+    { id: 'post-4', title: 'Ganadores del PanterFest 2023', date: '10 de Junio, 2024', excerpt: 'Un resumen de las obras y cineastas galardonados en la última edición de nuestro festival de cine.', content: 'Contenido completo...', imageId: 'blog-4', category: 'Noticias' },
+    { id: 'post-5', title: 'Guía Técnica: Cámaras y Lentes para Fotografía de Aves', date: '25 de Mayo, 2024', excerpt: 'Recomendaciones de equipo y técnicas para capturar la belleza de las aves en su hábitat natural.', content: 'Contenido completo...', imageId: 'blog-5', category: 'Artículos Técnicos' },
+    { id: 'post-6', title: 'Reflexiones sobre 10 años en Pronatura Noreste', date: '15 de Mayo, 2024', excerpt: 'Una mirada retrospectiva a los logros, aprendizajes y desafíos durante una década de liderazgo en la conservación.', content: 'Contenido completo...', imageId: 'blog-6', category: 'Conservación' },
+];
+
+export const galleryImages: GalleryImage[] = [
+  { id: 'gal-1', title: 'Jaguar en la selva', category: 'Naturaleza', imageId: 'gallery-nature-1' },
+  { id: 'gal-2', title: 'Quetzal en vuelo', category: 'Naturaleza', imageId: 'gallery-nature-2' },
+  { id: 'gal-3', title: 'Ballena jorobada', category: 'Naturaleza', imageId: 'gallery-nature-3' },
+  { id: 'gal-4', title: 'Set de filmación en el desierto', category: 'Proyectos', imageId: 'gallery-film-1' },
+  { id: 'gal-5', title: 'Paisaje cinematográfico', category: 'Proyectos', imageId: 'gallery-film-2' },
+  { id: 'gal-6', title: 'Director en acción', category: 'Proyectos', imageId: 'gallery-film-3' },
+  { id: 'gal-7', title: 'Conferencia magistral', category: 'Eventos', imageId: 'gallery-events-1' },
+  { id: 'gal-8', title: 'Estreno en festival', category: 'Eventos', imageId: 'gallery-events-2' },
+  { id: 'gal-9', title: 'Recibiendo premio', category: 'Eventos', imageId: 'gallery-events-3' },
+  { id: 'gal-10', title: 'Equipo en la jungla', category: 'Behind the Scenes', imageId: 'gallery-bts-1' },
+  { id: 'gal-11', title: 'Preparando toma', category: 'Behind the Scenes', imageId: 'gallery-bts-2' },
+  { id: 'gal-12', title: 'Sierra Madre Oriental', category: 'Paisajes', imageId: 'gallery-landscapes-1' },
+  { id: 'gal-13', title: 'Costa de Oaxaca', category: 'Paisajes', imageId: 'gallery-landscapes-2' },
+];
+
+export const achievements: Achievement[] = [
+    { year: 2020, title: 'Doctor Honoris Causa', organization: 'Universidad Autónoma de Nuevo León' },
+    { year: 2020, title: 'International Conservation Award', organization: 'Arizona Game & Fish Commission' },
+    { year: 2011, title: 'CEO / Director General', organization: 'Pronatura Noreste, A.C. (2011-2021)' },
+    { year: 2005, title: 'Director del Programa Desierto Chihuahuense', organization: 'World Wildlife Fund (WWF)' },
+];
+
+export const history = {
+    mission: "Destacar la importancia de la conservación ambiental a través del arte cinematográfico y la consultoría especializada, inspirando a la sociedad a reconectar con la naturaleza y a tomar acciones para su protección.",
+    vision: "Ser un referente en la producción audiovisual con contenido ambiental y social en México y Latinoamérica, creando obras que trasciendan fronteras e impulsen un cambio positivo y duradero en nuestra relación con el planeta.",
+    values: [
+        { title: 'Conservación', description: 'Nuestro motor principal es la protección y el respeto por el mundo natural.' },
+        { title: 'Creatividad', description: 'Buscamos formas innovadoras y artísticas para contar historias que importan.' },
+        { title: 'Excelencia', description: 'Comprometidos con la más alta calidad técnica y narrativa en cada proyecto.' },
+        { title: 'Compromiso Social', description: 'Creemos en el poder de nuestras historias para educar, inspirar y movilizar a la comunidad.' }
+    ]
+};
