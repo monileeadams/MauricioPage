@@ -49,15 +49,6 @@ export default function Home() {
             </div>
           </div>
         </section>
-        
-        <section className="py-20 bg-secondary">
-          <div className="container mx-auto px-4 text-center">
-            <blockquote className="font-headline text-3xl md:text-4xl lg:text-5xl max-w-4xl mx-auto text-foreground">
-              "La Tierra también tiene derechos, y el Estado la obligación de velar por el acceso efectivo a la justicia ambiental."
-            </blockquote>
-            <footer className="mt-4 text-lg font-semibold text-foreground">- Mauricio De la Maza-Benignos</footer>
-          </div>
-        </section>
 
         <section id="portfolio" className="py-24 bg-white">
           <div className="container mx-auto px-4">
