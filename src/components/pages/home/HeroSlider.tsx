@@ -37,7 +37,7 @@ export default function HeroSlider() {
             </CarouselItem>
         </CarouselContent>
       </Carousel>
-      <div className="absolute inset-0 bg-black/50" />
+      <div className="absolute inset-0 bg-black/40" />
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center text-white z-10 p-4">
         <h1 className="font-headline text-5xl md:text-7xl lg:text-8xl font-bold leading-tight drop-shadow-2xl">
           Cine Ambiental...
