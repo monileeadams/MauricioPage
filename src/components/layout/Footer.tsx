@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { Film } from 'lucide-react';
+import Image from 'next/image';
 import { navLinks, socialLinks } from '@/lib/data';
 
 export default function Footer() {
@@ -10,10 +10,7 @@ export default function Footer() {
           {/* Col 1: Logo and description */}
           <div className="space-y-4">
             <Link href="/" className="flex items-center gap-2">
-              <Film className="h-8 w-8 text-accent" />
-              <span className="font-headline text-2xl font-bold text-white">
-                Terra Vision
-              </span>
+              <Image src="/images/logo-de-la-maza.jpg" alt="Terra Vision Logo" width={170} height={40} />
             </Link>
             <p className="text-muted-foreground">
               Producción audiovisual y consultoría ambiental desde 1994.

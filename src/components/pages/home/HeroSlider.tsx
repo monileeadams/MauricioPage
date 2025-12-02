@@ -7,48 +7,34 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 import { Button } from "@/components/ui/button"
 import { PlaceHolderImages } from "@/lib/placeholder-images"
-import Autoplay from "embla-carousel-autoplay"
 
 export default function HeroSlider() {
-  const heroImages = [
-    PlaceHolderImages.find(p => p.id === 'hero-1'),
-    PlaceHolderImages.find(p => p.id === 'hero-2'),
-    PlaceHolderImages.find(p => p.id === 'hero-3'),
-  ].filter(Boolean);
+  const heroImage = PlaceHolderImages.find(p => p.id === 'hero-1');
 
   return (
     <section className="relative h-screen w-full">
       <Carousel 
         className="w-full h-full"
-        plugins={[
-          Autoplay({
-            delay: 5000,
-          }),
-        ]}
         opts={{
           loop: true,
         }}
       >
         <CarouselContent>
-          {heroImages.map((image, index) => (
-            <CarouselItem key={index}>
-              {image && (
+            <CarouselItem>
+              {heroImage && (
                 <Image
-                  src={image.imageUrl}
-                  alt={image.description}
+                  src={heroImage.imageUrl}
+                  alt={heroImage.description}
                   fill
                   className="object-cover"
-                  priority={index === 0}
-                  data-ai-hint={image.imageHint}
+                  priority
+                  data-ai-hint={heroImage.imageHint}
                 />
               )}
             </CarouselItem>
-          ))}
         </CarouselContent>
       </Carousel>
       <div className="absolute inset-0 bg-black/50" />

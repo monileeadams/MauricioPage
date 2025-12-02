@@ -2,8 +2,9 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Film } from 'lucide-react';
+import { Menu } from 'lucide-react';
 
 import { navLinks } from '@/lib/data';
 import { cn } from '@/lib/utils';
@@ -13,6 +14,8 @@ import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/s
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const pathname = usePathname();
+
+  const isHome = pathname === '/';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,15 +30,12 @@ export default function Header() {
     <header
       className={cn(
         'sticky top-0 z-50 w-full transition-all duration-300',
-        isScrolled ? 'bg-white/80 shadow-md backdrop-blur-sm' : 'bg-white'
+        isScrolled || !isHome ? 'bg-white shadow-md' : 'bg-transparent',
       )}
     >
       <div className="container mx-auto flex h-20 items-center justify-between px-4">
         <Link href="/" className="flex items-center gap-2">
-          <Film className='h-8 w-8 text-foreground' />
-          <span className='font-headline text-2xl font-bold text-foreground'>
-            Terra Vision
-          </span>
+          <Image src="/images/logo-de-la-maza.jpg" alt="Terra Vision Logo" width={170} height={40} />
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navLinks.map((link) => (
@@ -44,7 +44,7 @@ export default function Header() {
               href={link.href}
               className={cn(
                 'font-medium transition-colors hover:text-accent',
-                pathname === link.href ? 'text-accent' : 'text-foreground'
+                pathname === link.href ? 'text-accent' : (isHome && !isScrolled ? 'text-white' : 'text-foreground')
               )}
             >
               {link.label}
@@ -54,17 +54,14 @@ export default function Header() {
         <div className="md:hidden">
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className='text-foreground'>
+              <Button variant="ghost" size="icon" className={cn(isHome && !isScrolled ? 'text-white' : 'text-foreground')}>
                 <Menu />
               </Button>
             </SheetTrigger>
             <SheetContent side="right" className="w-[300px] bg-background">
               <div className="flex flex-col space-y-6 p-6">
                 <Link href="/" className="flex items-center gap-2 self-start">
-                   <Film className='h-8 w-8 text-foreground' />
-                   <span className="font-headline text-2xl font-bold text-foreground">
-                    Terra Vision
-                   </span>
+                   <Image src="/images/logo-de-la-maza.jpg" alt="Terra Vision Logo" width={170} height={40} />
                 </Link>
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map((link) => (

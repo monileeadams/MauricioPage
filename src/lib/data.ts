@@ -138,6 +138,7 @@ export const galleryImages: GalleryImage[] = [
   { id: 'gal-11', title: 'Preparando toma', category: 'Behind the Scenes', imageId: 'gallery-bts-2' },
   { id: 'gal-12', title: 'Sierra Madre Oriental', category: 'Paisajes', imageId: 'gallery-landscapes-1' },
   { id: 'gal-13', title: 'Costa de Oaxaca', category: 'Paisajes', imageId: 'gallery-landscapes-2' },
+  { id: 'gal-14', title: 'Paisaje de Montaña', category: 'Paisajes', imageId: 'gallery-landscape-3' },
 ];
 
 export const achievements: Achievement[] = [
@@ -158,4 +159,5 @@ export const history = {
     ]
 };
 
+    
     
