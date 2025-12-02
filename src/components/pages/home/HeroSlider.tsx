@@ -4,46 +4,36 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-} from "@/components/ui/carousel"
+import useEmblaCarousel from 'embla-carousel-react'
+import Fade from 'embla-carousel-fade'
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
 
 export default function HeroSlider() {
   const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-'));
 
-  const carouselPlugins = [
+  const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: true }),
-  ];
+    Fade()
+  ]);
 
   return (
-    <section className="relative h-[85vh] w-full overflow-hidden">
-      <Carousel
-        opts={{ loop: true }}
-        plugins={carouselPlugins}
-        className="h-full w-full embla-fade"
-      >
-        <CarouselContent>
-          {heroImages.map((heroImage, index) => (
-            <CarouselItem key={heroImage.id} className="h-full">
-              <div className="relative h-full w-full">
-                <Image
-                    src={heroImage.imageUrl}
-                    alt={heroImage.description}
-                    fill
-                    className="object-cover embla__slide__img"
-                    priority={index === 0}
-                    data-ai-hint={heroImage.imageHint}
-                />
-                <div className="absolute inset-0 bg-black/40" />
-              </div>
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-      </Carousel>
+    <section className="relative h-[85vh] w-full overflow-hidden" ref={emblaRef}>
+      <div className="embla__container h-full">
+        {heroImages.map((heroImage, index) => (
+          <div key={heroImage.id} className="embla__slide relative h-full">
+             <Image
+                src={heroImage.imageUrl}
+                alt={heroImage.description}
+                fill
+                className="object-cover"
+                priority={index === 0}
+                data-ai-hint={heroImage.imageHint}
+            />
+            <div className="absolute inset-0 bg-black/40" />
+          </div>
+        ))}
+      </div>
       
       <div className="absolute inset-0 z-10 flex h-full flex-col items-center justify-center p-4 text-center text-white">
         <h1 className="font-headline text-5xl font-bold leading-tight drop-shadow-2xl md:text-7xl lg:text-8xl">

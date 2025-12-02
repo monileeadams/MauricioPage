@@ -10,19 +10,13 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Playfair Display', serif;
 }
 
-.embla-fade .embla__slide {
+.embla__slide {
   opacity: 0;
   transition: opacity 1.5s ease-in-out;
 }
-.embla-fade .embla__slide.is-in-view {
+.embla__slide.is-in-view {
   opacity: 1;
 }
-
-.embla-fade .embla__slide.is-in-view .embla__slide__img {
-  transform: scale(1.05);
-  transition: transform 6s ease-out;
-}
-
 
 @layer base {
   :root {
