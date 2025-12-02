@@ -42,7 +42,7 @@ export default function Header() {
   );
 
 
-  const logoSrc = isHome && !isScrolled ? "/images/logo-white.png" : "/images/logo-de-la-maza.jpg";
+  const logoSrc = "/images/Logo_color.png";
 
   return (
     <header className={headerClasses}>
