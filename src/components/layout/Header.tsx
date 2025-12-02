@@ -42,7 +42,8 @@ export default function Header() {
   );
 
 
-  const logoSrc = "/images/Logo_color.png";
+  const logoSrc = isHome && !isScrolled ? "/images/logo-white.png" : "/images/Logo_color.png";
+  const mobileLogoSrc = "/images/Logo_color.png";
 
   return (
     <header className={headerClasses}>
@@ -74,7 +75,7 @@ export default function Header() {
             <SheetContent side="right" className="w-[300px] bg-background">
               <div className="flex flex-col space-y-6 p-6">
                 <Link href="/" className="flex items-center gap-2 self-start">
-                   <Image src="/images/logo-de-la-maza.jpg" alt="Terra Vision Logo" width={170} height={40} className="h-10 w-auto" />
+                   <Image src={mobileLogoSrc} alt="Terra Vision Logo" width={170} height={40} className="h-10 w-auto" />
                 </Link>
                 <nav className="flex flex-col space-y-4">
                   {navLinks.map((link) => (
