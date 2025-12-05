@@ -37,13 +37,10 @@ export default function HeroSlider() {
       
       <div className="absolute inset-0 z-10 flex h-full flex-col items-center justify-center p-4 text-center">
         <h1 className="font-headline text-5xl font-bold leading-tight drop-shadow-2xl md:text-7xl lg:text-8xl">
-          Cine Ambiental...
+          Visión Narrativa
         </h1>
         <p className="mt-4 max-w-2xl text-lg text-gray-200 md:text-xl">
-          Explorando la belleza de nuestro planeta y las historias que merecen ser contadas.
-        </p>
-         <p className="mt-2 text-lg italic text-gray-300 md:text-xl">
-            - Mauricio De la Maza-Benignos
+          Director Audiovisual & Consultoría Creativa
         </p>
         <Button asChild size="lg" className="mt-8 bg-accent text-lg text-primary-foreground hover:bg-accent/90">
             <a href="https://panterracinefest.com" target="_blank" rel="noopener noreferrer">Conoce más</a>
