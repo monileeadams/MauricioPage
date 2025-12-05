@@ -1,98 +1,101 @@
-import Image from "next/image";
-import PageHero from "@/components/common/PageHero";
-import { biography, history, achievements } from "@/lib/data";
-import { PlaceHolderImages } from "@/lib/placeholder-images";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Award, Target, Eye, Handshake } from "lucide-react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { BookOpenText, Users, Award, Youtube } from 'lucide-react';
 
 export default function NosotrosPage() {
-  const bioImage = PlaceHolderImages.find(p => p.id === 'biography-mauricio');
-  const valueIcons = {
-      'Conservación': <Handshake className="h-8 w-8 text-accent" />,
-      'Creatividad': <Award className="h-8 w-8 text-accent" />,
-      'Excelencia': <Target className="h-8 w-8 text-accent" />,
-      'Compromiso Social': <Eye className="h-8 w-8 text-accent" />
-  };
+  const heroImage = PlaceHolderImages.find((p) => p.id === 'biography-mauricio');
+
+  const stats = [
+    { number: 300, label: 'Artículos publicados', icon: BookOpenText },
+    { number: 100, label: 'Clientes satisfechos', icon: Users },
+    { number: 14, label: 'Premios recibidos', icon: Award },
+  ];
 
   return (
     <>
-      <PageHero title="Nosotros" imageId="about-hero" />
+      {/* Hero Section */}
+      <section className="relative h-[60vh] min-h-[400px] w-full text-white">
+        {heroImage && (
+          <Image
+            src={heroImage.imageUrl}
+            alt="Mauricio De la Maza-Benignos"
+            fill
+            className="object-cover object-top"
+            priority
+            data-ai-hint={heroImage.imageHint}
+          />
+        )}
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 flex h-full flex-col items-center justify-center text-center p-4">
+          <h1 className="font-headline text-5xl md:text-7xl font-bold">
+            Mauricio de la Maza-Benignos
+          </h1>
+          <p className="mt-4 text-lg md:text-xl tracking-[0.2em] uppercase">
+            DP | Director | Filmmaker
+          </p>
+        </div>
+      </section>
 
-      <section className="py-24">
+      {/* Stats Section */}
+      <section className="bg-background py-16">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-5 gap-12 items-start">
-            <div className="md:col-span-3">
-              <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">Nuestra Historia</h2>
-              <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
-                <p>{biography.full}</p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            {stats.map((stat, index) => (
+              <div key={index}>
+                <p className="text-5xl md:text-6xl font-bold text-accent font-headline">
+                  {stat.number}
+                </p>
+                <p className="mt-2 text-sm uppercase tracking-wider text-muted-foreground">
+                  {stat.label}
+                </p>
               </div>
-            </div>
-            <div className="md:col-span-2 flex justify-center">
-              {bioImage && (
-                <Image
-                  src={bioImage.imageUrl}
-                  alt="Mauricio De la Maza-Benignos"
-                  width={350}
-                  height={350}
-                  className="rounded-lg object-cover shadow-xl"
-                  data-ai-hint={bioImage.imageHint}
-                />
-              )}
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="py-24 bg-secondary">
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-12 text-center md:text-left">
-            <div>
-              <h3 className="font-headline text-3xl font-bold mb-4">Misión</h3>
-              <p className="text-lg text-muted-foreground">{history.mission}</p>
-            </div>
-            <div>
-              <h3 className="font-headline text-3xl font-bold mb-4">Visión</h3>
-              <p className="text-lg text-muted-foreground">{history.vision}</p>
-            </div>
-          </div>
-          <div className="mt-16">
-            <h3 className="font-headline text-3xl font-bold mb-8 text-center">Nuestros Valores</h3>
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {history.values.map((value) => (
-                <Card key={value.title} className="text-center p-6">
-                    <div className="flex justify-center mb-4">
-                       {valueIcons[value.title as keyof typeof valueIcons]}
-                    </div>
-                  <h4 className="font-headline text-2xl font-semibold mb-2">{value.title}</h4>
-                  <p className="text-muted-foreground">{value.description}</p>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-      
+      {/* Biography Section */}
       <section className="py-24">
         <div className="container mx-auto px-4">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-center mb-12">Logros y Reconocimientos</h2>
-            <div className="max-w-3xl mx-auto">
-                <ul className="space-y-8">
-                    {achievements.map((achievement) => (
-                        <li key={achievement.title} className="flex items-start space-x-6">
-                            <div className="flex-shrink-0">
-                                <span className="flex items-center justify-center h-16 w-16 rounded-full bg-secondary">
-                                    <Award className="h-8 w-8 text-accent"/>
-                                </span>
-                            </div>
-                            <div>
-                                <p className="text-lg font-semibold text-muted-foreground">{achievement.year}</p>
-                                <h3 className="font-headline text-2xl font-bold">{achievement.title}</h3>
-                                <p className="text-lg text-muted-foreground">{achievement.organization}</p>
-                            </div>
-                        </li>
-                    ))}
-                </ul>
+          <div className="max-w-4xl mx-auto">
+            <div className="prose prose-lg max-w-none text-muted-foreground space-y-6">
+              <p>
+                Mauricio de la Maza se graduó summa cum laude con un Doctorado en Biología y Desarrollo Sustentable en la UANL; cuenta con una Maestría en administración de Empresas de la Universidad de Lancaster, Reino Unido, con programa de intercambio con la ESC Clemont, en Lyon Francia, donde se especializó en Planificación Estratégica; es Ingeniero Agrónomo Zootecnista en Ingeniería Agrícola y Zootecnia del Tecnológico de Monterrey; además posee una Licenciatura en Derecho con Mención Honorífica de Excelencia del TecMilenio y estudios de Maestría en Arte Cinematográfico y Multimedia en la Escuela Superior de Cine y Multimedia Ilumina.
+              </p>
+              <p>
+                En 1994 le fue otorgada la medalla de “Mejores estudiantes de México” por el CONACYT y el Instituto Mexicano de Cultura, impartido por el presidente a los mejores estudiantes graduandos.
+              </p>
+              <p>
+                En 2014 recibió el premio “Dr. José Álvarez del Villar”, de la Sociedad Mexicana de Ictiología a la mejor tesis doctoral; y en 2015 fue galardonado con el Premio de Investigación UANL al mejor trabajo académico en Ciencias Naturales.
+              </p>
+              <p>
+                Desde el 2011 hasta enero de 2021 fue director general de la organización Pronatura Noreste y del 2015 a 2020 fue el primer vocal ambiental y Presidente Suplente del Consejo de Cuenca Río Bravo. Actualmente trabaja como profesionista independiente, es miembro del consejo asesor de AESPAC, A.C., y director de “De la Maza Consulting and Films”.
+              </p>
+              <p>
+                Antes de trabajar en Pronatura Noreste, fue director del Fondo Mundial para la Naturaleza para los programas de conservación en el norte de México y suroeste de los Estados Unidos.
+              </p>
+              <p>
+                Es miembro del Sistema Nacional de Investigadores (SNI 1). Ha editado libros, escrito capítulos de libros y publicaciones científicas en diversos campos académicos. También ha desarrollado análisis jurídicos y trabajo de política pública en materia de agua dulce, del ambiente natural y del desarrollo sostenible, así como ha producido y dirigido un número importante de cortometrajes y mediometrajes documentales.
+              </p>
+              <div className="bg-secondary p-6 rounded-lg">
+                <h3 className="font-headline text-2xl font-bold text-foreground mb-4">Lucha por El Llano de la Soledad</h3>
+                <p>
+                  Encabezó la estrategia para salvar El Llano de la Soledad, la colonia más grande de perritos de la pradera, de la devastación por la industria de la papa. Dentro de sus acciones, en diciembre de 2019, Mauricio de la Maza entregó una demanda penal por escrito ante la Fiscalía General de la República, delegación Nuevo León. En el escrito indicaba que las maniobras de los tractores para cultivar papa estaban tapando las madrigueras de los perritos de la pradera y éstos morían asfixiados.
+                </p>
+                <Link href="https://youtu.be/DxU4d1quC4E" target="_blank" rel="noopener noreferrer" className="inline-flex items-center mt-4 text-accent hover:underline">
+                  <Youtube className="mr-2 h-5 w-5" />
+                  Ver video en YouTube
+                </Link>
+              </div>
+              <p>
+                En octubre de 2020, Mauricio de la Maza fue amedrentado con ser encarcelado, y amenazado de muerte, al intentar realizar trabajos para la conservación y restauración de los humedales en Cuatro Ciénegas, Coahuila. Leobardo Sánchez, un trabajador del municipio, acompañado de personas del ejido San Juan de Boquillas, extraían ilegalmente el agua, y al detectar que De la Maza buscaba crear obras para evitar la extracción irracional del agua, pasaron a las amenazas.
+              </p>
+              <p>
+                En 2020 recibió del Programa Internacional y Fronterizo del Departamento de Caza y Pesca de Arizona, E.E.U.U., el Premio a la Conservación, que otorga dicha agencia gubernamental, por su trayectoria profesional a favor de los humedales y la vida silvestre en la región transfronteriza entre ambos países. Ese mismo año produjo, filmó y dirigió el documental Ad memoriam rei perpetuam, mismo que fue oficialmente seleccionado para exhibición dentro del festival de cine internacional, Wildlife Conservation Film Festival (WCFF).
+              </p>
             </div>
+          </div>
         </div>
       </section>
     </>
