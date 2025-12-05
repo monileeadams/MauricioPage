@@ -1,56 +1,94 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import PageHero from "@/components/common/PageHero";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
 import { Button } from "@/components/ui/button";
 import { services } from "@/lib/data";
-import { CheckCircle } from 'lucide-react';
+import { PlaceHolderImages } from '@/lib/placeholder-images';
 
 export default function ServiciosPage() {
+  const talentImage1 = PlaceHolderImages.find(p => p.id === 'talent-1');
+  const talentImage2 = PlaceHolderImages.find(p => p.id === 'talent-2');
+
   return (
     <>
-      <PageHero title="Nuestros Servicios" imageId="services-hero" />
+      <PageHero title="Servicios" imageId="services-hero" />
 
       <section className="py-24">
-        <div className="container mx-auto px-4 max-w-4xl">
+        <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="font-headline text-4xl md:text-5xl font-bold">Un Abanico de Soluciones</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-              Desde la concepción de una idea hasta su ejecución final, ofrecemos una gama completa de servicios para contar historias, proteger ecosistemas y fomentar una cultura de sostenibilidad.
-            </p>
+            <p className="text-sm uppercase tracking-widest text-accent mb-2">Nuestros Servicios</p>
+            <h2 className="font-headline text-4xl md:text-5xl font-bold">Creamos tus producciones</h2>
           </div>
 
-          <Accordion type="single" collapsible className="w-full" defaultValue="item-0">
-            {services.map((service, index) => (
-              <AccordionItem key={service.title} value={`item-${index}`}>
-                <AccordionTrigger className="text-2xl font-headline hover:no-underline">
-                  {service.title}
-                </AccordionTrigger>
-                <AccordionContent className="pt-4">
-                  <p className="text-lg text-muted-foreground mb-6">{service.summary}</p>
-                  {service.details.map((detail, detailIndex) => (
-                    <div key={detailIndex} className="mb-6">
-                      <h4 className="font-bold text-xl mb-4 text-foreground">{detail.title}</h4>
-                       <ul className="space-y-3">
-                        {detail.items.map((item, itemIndex) => (
-                          <li key={itemIndex} className="flex items-start">
-                             <CheckCircle className="h-5 w-5 text-accent mr-3 mt-1 flex-shrink-0" />
-                            <span className="text-muted-foreground">{item}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  ))}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {services.map((service, index) => {
+              const serviceImage = PlaceHolderImages.find(p => p.id === service.imageId);
+              return (
+                <Link href={`/servicios#${service.title.toLowerCase().replace(/\s/g, '-')}`} key={service.title} className="group relative aspect-square block overflow-hidden rounded-lg shadow-lg">
+                  {serviceImage && (
+                    <Image
+                      src={serviceImage.imageUrl}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      data-ai-hint={serviceImage.imageHint}
+                    />
+                  )}
+                  <div className="absolute inset-0 bg-black/40"></div>
+                  <div className="absolute inset-x-0 bottom-0 p-6 bg-white">
+                    <h3 className="font-headline text-2xl font-bold text-center text-foreground">
+                      {service.title}
+                    </h3>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
         </div>
       </section>
+      
+      <section id="detalles-servicios" className="py-24 bg-secondary">
+        <div className="container mx-auto px-4 max-w-4xl">
+            {services.map((service) => (
+                <div key={service.title} id={service.title.toLowerCase().replace(/\s/g, '-')} className="mb-20 scroll-mt-24">
+                    <h3 className="font-headline text-4xl font-bold mb-4">{service.title}</h3>
+                    <p className="text-lg text-muted-foreground mb-8">{service.summary}</p>
+                    {service.details.map((detail, detailIndex) => (
+                        <div key={detailIndex}>
+                            <h4 className="font-bold text-2xl mb-4 text-foreground">{detail.title}</h4>
+                            <ul className="space-y-3 text-muted-foreground">
+                                {detail.items.map((item, itemIndex) => (
+                                <li key={itemIndex} className="flex items-start">
+                                    <span className="text-accent mr-3 mt-1 font-bold text-xl">&#8226;</span>
+                                    <span>{item}</span>
+                                </li>
+                                ))}
+                            </ul>
+                        </div>
+                    ))}
+                </div>
+            ))}
+        </div>
+      </section>
+
+       <section className="py-24">
+          <div className="container mx-auto px-4">
+              <div className="text-center mb-12">
+                <h2 className="font-headline text-4xl md:text-5xl font-bold">Desarrollamos Talento</h2>
+                <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+                    A través de talleres, conferencias y festivales de cine, fomentamos el crecimiento de nuevos cineastas y fortalecemos la cultura de la conservación.
+                </p>
+              </div>
+              <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+                  {talentImage1 && (
+                    <Image src={talentImage1.imageUrl} alt={talentImage1.description} width={600} height={400} className="rounded-lg shadow-lg" data-ai-hint={talentImage1.imageHint} />
+                  )}
+                  {talentImage2 && (
+                    <Image src={talentImage2.imageUrl} alt={talentImage2.description} width={600} height={400} className="rounded-lg shadow-lg" data-ai-hint={talentImage2.imageHint} />
+                  )}
+              </div>
+          </div>
+       </section>
 
        <section className="py-24 bg-secondary">
           <div className="container mx-auto px-4 text-center">

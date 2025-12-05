@@ -11,6 +11,7 @@ export type SocialLink = {
 
 export type Service = {
   title: string;
+  imageId: string;
   summary: string;
   details: {
     title: string;

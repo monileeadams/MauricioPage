@@ -35,9 +35,10 @@ export const biography = {
   full: "Mauricio de la Maza se graduó summa cum laude con un Doctorado en Biología y Desarrollo Sustentable en la UANL; cuenta con una Maestría en administración de Empresas de la Universidad de Lancaster, Reino Unido, con programa de intercambio con ESC, Lyon, Francia, donde se especializó en Planificación Estratégica; es Ingeniero Agrónomo Zootecnista en Ingeniería Agrícola y Zootecnia del Tecnológico de Monterrey; además posee una licenciatura en Derecho con Mención Honorífica de Excelencia del TecMilenio y estudios de Maestría en Arte Cinematográfico y Multimedia en la Escuela Superior de Cine y Multimedia Ilumina."
 };
 
-export const services = [
+export const services: Service[] = [
   {
     title: 'Producción Audiovisual',
+    imageId: 'service-audiovisual',
     summary: 'Documentales, videos institucionales y contenido digital con enfoque en naturaleza y conservación.',
     details: [
         {
@@ -46,8 +47,6 @@ export const services = [
             items: [
                 "Documentales de naturaleza y conservación",
                 "Videos institucionales y corporativos",
-                "Contenido para redes sociales (cápsulas, reels, etc.)",
-                "Producción para televisión y plataformas de streaming",
                 "Proyectos especiales en colaboración con productoras como BBC Nature",
                 "Largometrajes y cortometrajes documentales"
             ]
@@ -56,6 +55,7 @@ export const services = [
   },
   {
     title: 'Fotografía',
+    imageId: 'service-photography',
     summary: 'Capturamos la esencia de la naturaleza, eventos y proyectos con una visión artística y profesional.',
      details: [
         {
@@ -71,8 +71,9 @@ export const services = [
         }
     ]
   },
-  {
+    {
     title: 'Cultura',
+    imageId: 'service-culture',
     summary: 'Fomentamos la cultura ambiental a través de festivales, talleres y eventos educativos.',
     details: [
         {
@@ -90,6 +91,7 @@ export const services = [
   },
   {
     title: 'Consultoría',
+    imageId: 'service-consulting',
     summary: 'Asesoría experta en conservación, desarrollo sustentable y gestión de proyectos ambientales.',
     details: [
         {
@@ -102,6 +104,42 @@ export const services = [
                 "Planificación estratégica para organizaciones de la sociedad civil (ONGs)",
                 "Evaluación de impacto ambiental y social de proyectos",
                 "Gestión de proyectos de conservación y recaudación de fondos"
+            ]
+        }
+    ]
+  },
+  {
+    title: 'Contenido Digital',
+    imageId: 'service-digital',
+    summary: 'Creación y estrategia de contenido para plataformas digitales, maximizando el alcance y la interacción.',
+    details: [
+        {
+            title: "Estrategias Digitales",
+            description: "Desarrollamos y ejecutamos estrategias de contenido para el mundo digital.",
+            items: [
+                "Creación de contenido para redes sociales (cápsulas, reels, etc.)",
+                "Gestión de campañas de comunicación digital",
+                "Estrategia de posicionamiento de marca en línea",
+                "Producción de podcasts y series web",
+                "Marketing de contenidos con enfoque ambiental y social"
+            ]
+        }
+    ]
+  },
+  {
+    title: 'Video Editing',
+    imageId: 'service-editing',
+    summary: 'Post-producción profesional para dar vida a tus proyectos audiovisuales.',
+    details: [
+        {
+            title: "Post-Producción de Video",
+            description: "Servicios completos de edición y post-producción para cine, TV y web.",
+            items: [
+                "Edición de video y montaje",
+                "Corrección de color y etalonaje",
+                "Diseño y mezcla de sonido",
+                "Creación de gráficos en movimiento y efectos visuales (VFX)",
+                "Masterización y entrega para diferentes plataformas"
             ]
         }
     ]
@@ -160,30 +198,30 @@ export const history = {
 };
 
 export const timelineEvents: TimelineEvent[] = [
-    {
-        year: '1994',
-        description: 'Le otorgan el "Premio a los mejores estudiantes de México" por el Comité Nacional Permanente de los Mejores Estudiantes de México'
-    },
-    {
-        year: '2006 - 2011',
-        description: 'Se desempeñó como Director del Fondo Mundial para la Naturaleza.'
-    },
-    {
-        year: '2011 - 2021',
-        description: 'Se desempeñó como Director de Ciencias de la Conservación y Director General de la ONG mexicana Pronatura Noreste.'
-    },
-    {
-        year: '2014',
-        description: 'Obtiene el primer lugar en el "Premio Dr. José Álvarez Del Villar" por su tesis doctoral, otorgado por la Sociedad Mexicana de Ictiología'
-    },
-    {
-        year: '2015',
-        description: 'Logra el Premio de Investigación UANL al mejor artículo académico en Ciencias Naturales'
-    },
-    {
-        year: '2021 - Actualidad',
-        description: 'Funge como miembro del consejo asesor de AESPAC, A.C., y director de "De la Maza Consulting and Films"'
-    }
+  {
+      year: '1994',
+      description: 'Le otorgan el "Premio a los mejores estudiantes de México" por el Comité Nacional Permanente de los Mejores Estudiantes de México'
+  },
+  {
+      year: '2014',
+      description: 'Obtiene el primer lugar en el "Premio Dr. José Álvarez Del Villar" por su tesis doctoral, otorgado por la Sociedad Mexicana de Ictiología'
+  },
+  {
+      year: '2015',
+      description: 'Logra el Premio de Investigación UANL al mejor artículo académico en Ciencias Naturales'
+  },
+  {
+      year: '2006 - 2011',
+      description: 'Se desempeñó como Director del Fondo Mundial para la Naturaleza.'
+  },
+  {
+      year: '2011 - 2021',
+      description: 'Se desempeñó como Director de Ciencias de la Conservación y Director General de la ONG mexicana Pronatura Noreste.'
+  },
+  {
+      year: '2021 - Actualidad',
+      description: 'Funge como miembro del consejo asesor de AESPAC, A.C., y director de "De la Maza Consulting and Films"'
+  }
 ];
     
     

@@ -111,7 +111,7 @@
     {
       "id": "services-hero",
       "description": "Hero image for the Services page",
-      "imageUrl": "https://images.unsplash.com/photo-1619708454012-e02c71dae3f6?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxkcm9uZSUyMGZpbG1pbmd8ZW58MHx8fHwxNzY0NzAxMDkzfDA&ixlib.rb-4.1.0&q=80&w=1080",
+      "imageUrl": "/images/servicios-hero.jpg",
       "imageHint": "drone filming"
     },
     {
@@ -221,6 +221,54 @@
       "description": "Call to action background",
       "imageUrl": "/images/AC3I3990.jpg",
       "imageHint": "nature water"
+    },
+    {
+      "id": "service-audiovisual",
+      "description": "Man filming in a field",
+      "imageUrl": "/images/IMG_6088.jpg",
+      "imageHint": "man filming"
+    },
+    {
+      "id": "service-photography",
+      "description": "Mauricio De la Maza with a camera",
+      "imageUrl": "/images/Mauricio-Pronatura.jpg",
+      "imageHint": "filmmaker camera"
+    },
+    {
+      "id": "service-culture",
+      "description": "People near a waterfall",
+      "imageUrl": "/images/Imagen-012.jpg",
+      "imageHint": "people waterfall"
+    },
+    {
+      "id": "service-consulting",
+      "description": "Man giving a presentation",
+      "imageUrl": "/images/IMG_6504.jpg",
+      "imageHint": "man presentation"
+    },
+    {
+      "id": "service-digital",
+      "description": "Close up of a hummingbird",
+      "imageUrl": "/images/Copia-de-Colibri-3.jpg",
+      "imageHint": "hummingbird close"
+    },
+    {
+      "id": "service-editing",
+      "description": "Video editing setup",
+      "imageUrl": "/images/service-6.jpg",
+      "imageHint": "video editing"
+    },
+    {
+      "id": "talent-1",
+      "description": "Filming for Ad Memoriam",
+      "imageUrl": "/images/filmando-ad-memoriam.jpg",
+      "imageHint": "filming documentary"
+    },
+    {
+      "id": "talent-2",
+      "description": "Mauricio giving a TED talk",
+      "imageUrl": "/images/TED.jpg",
+      "imageHint": "man conference"
     }
   ]
 }
