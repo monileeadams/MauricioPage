@@ -40,7 +40,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="font-headline text-3xl md:text-4xl font-bold mb-6">Mauricio De la Maza-Benignos</h2>
+                <h2 className="font-headline text-2xl md:text-3xl font-bold mb-6">Mauricio De la Maza-Benignos</h2>
                 <div className="max-w-none text-muted-foreground space-y-4">
                   <p>{newBio}</p>
                 </div>
