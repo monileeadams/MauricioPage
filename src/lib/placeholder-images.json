@@ -269,6 +269,12 @@
       "description": "Mauricio giving a TED talk",
       "imageUrl": "/images/TED.jpg",
       "imageHint": "man conference"
+    },
+    {
+      "id": "services-cta-bg",
+      "description": "Call to action background for services page",
+      "imageUrl": "/images/contacto.jpg",
+      "imageHint": "nature trees"
     }
   ]
 }

@@ -14,6 +14,7 @@ import { Check } from 'lucide-react';
 export default function ServiciosPage() {
   const talentImage1 = PlaceHolderImages.find(p => p.id === 'talent-1');
   const talentImage2 = PlaceHolderImages.find(p => p.id === 'talent-2');
+  const ctaImage = PlaceHolderImages.find(p => p.id === 'services-cta-bg');
   const [selectedService, setSelectedService] = useState<Service | null>(services[0]);
 
   return (
@@ -117,13 +118,23 @@ export default function ServiciosPage() {
           </div>
        </section>
 
-       <section className="py-24 bg-secondary">
-          <div className="container mx-auto px-4 text-center">
+       <section className="relative py-24">
+          {ctaImage && (
+            <Image
+              src={ctaImage.imageUrl}
+              alt={ctaImage.description}
+              fill
+              className="object-cover"
+              data-ai-hint={ctaImage.imageHint}
+            />
+          )}
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10 container mx-auto px-4 text-center text-white">
             <h2 className="font-headline text-3xl md:text-4xl font-bold max-w-2xl mx-auto">¿Listo para dar vida a tu proyecto?</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
+            <p className="mt-4 text-lg max-w-xl mx-auto">
               Sea una idea para un documental, una necesidad de consultoría o un evento cultural, estamos aquí para ayudarte a hacerlo realidad.
             </p>
-            <Button asChild size="lg" className="mt-8 bg-accent hover:bg-accent/90">
+            <Button asChild size="lg" className="mt-8 bg-accent text-primary-foreground hover:bg-accent/90">
               <Link href="/contacto">Solicita una cotización</Link>
             </Button>
           </div>
