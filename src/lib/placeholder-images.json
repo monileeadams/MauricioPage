@@ -109,9 +109,9 @@
       "imageHint": "team collaboration"
     },
     {
-      "id": "services-hero",
+      "id": "services-hero-1",
       "description": "Hero image for the Services page",
-      "imageUrl": "/images/servicios-hero.jpg",
+      "imageUrl": "/images/servicios-1.jpg",
       "imageHint": "drone filming"
     },
     {

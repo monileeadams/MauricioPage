@@ -11,7 +11,7 @@ export default function ServiciosPage() {
 
   return (
     <>
-      <PageHero title="Servicios" imageId="services-hero" />
+      <PageHero title="Servicios" imageId="services-hero-1" />
 
       <section className="py-24">
         <div className="container mx-auto px-4">
