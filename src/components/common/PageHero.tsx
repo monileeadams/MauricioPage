@@ -9,8 +9,6 @@ type PageHeroProps = {
 export default function PageHero({ title, imageId }: PageHeroProps) {
   const heroImage = PlaceHolderImages.find((p) => p.id === imageId);
   
-  const isMagazine = imageId === 'magazine-hero';
-
   return (
     <section className="relative h-[400px] w-full text-white">
       {heroImage && (
@@ -18,7 +16,7 @@ export default function PageHero({ title, imageId }: PageHeroProps) {
           src={heroImage.imageUrl}
           alt={title}
           fill
-          className={`object-cover ${isMagazine ? 'object-bottom' : ''}`}
+          className="object-cover"
           priority
           data-ai-hint={heroImage.imageHint}
         />
