@@ -41,7 +41,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
                 <h2 className="font-headline text-4xl md:text-5xl font-bold mb-6">Mauricio De la Maza-Benignos</h2>
-                <div className="prose prose-lg max-w-none text-muted-foreground space-y-4">
+                <div className="prose max-w-none text-muted-foreground space-y-4">
                   <p>{newBio}</p>
                 </div>
                 <div className="mt-6">
