@@ -40,7 +40,7 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="font-headline text-2xl font-bold mb-4">Mauricio De la Maza-Benignos</h2>
+                <h2 className="font-headline text-xl font-bold mb-4">Mauricio De la Maza-Benignos</h2>
                 <div className="text-muted-foreground space-y-4">
                   <p>{newBio}</p>
                 </div>
@@ -69,8 +69,9 @@ export default function Home() {
 
         <section id="portfolio" className="py-24 bg-black text-white">
           <div className="container mx-auto px-4 text-center">
+            <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Portafolio</p>
             <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-8">
-              Producciones
+              Nuestras Producciones
             </h2>
             <div className="max-w-4xl mx-auto mb-8">
               <div className="aspect-video w-full">
