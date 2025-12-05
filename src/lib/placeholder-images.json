@@ -32,9 +32,9 @@
     },
     {
       "id": "biography-mauricio",
-      "description": "Professional photo of Mauricio De la Maza-Benignos",
-      "imageUrl": "/images/Mauricio.jpg",
-      "imageHint": "professional portrait"
+      "description": "Imagen de un paisaje de montaña.",
+      "imageUrl": "/images/nosotros.jpg",
+      "imageHint": "mountain landscape"
     },
     {
       "id": "project-1",
