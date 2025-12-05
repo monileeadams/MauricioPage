@@ -4,16 +4,19 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ArrowRight, Camera, FileText, Aperture, Quote } from "lucide-react";
+import { ArrowRight, Camera, FileText, Aperture, Quote, PlayCircle } from "lucide-react";
 import { siteConfig, services, projects, posts } from "@/lib/data";
 import HeroSlider from "@/components/pages/home/HeroSlider";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TheatreIcon } from "@/components/icons";
 import HistoryTimeline from "@/components/pages/home/HistoryTimeline";
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 
 export default function Home() {
   const bioImage = PlaceHolderImages.find(p => p.id === 'biography-mauricio');
   const ctaImage = PlaceHolderImages.find(p => p.id === 'cta-bg');
+  const productionVideoPoster = PlaceHolderImages.find(p => p.id === 'production-video-poster');
+
   const serviceIcons = {
     'Producción Audiovisual': <Camera className="h-10 w-10 text-accent" />,
     'Fotografía': <Aperture className="h-10 w-10 text-accent" />,
@@ -63,7 +66,7 @@ export default function Home() {
                     src={bioImage.imageUrl}
                     alt="Mauricio De la Maza-Benignos"
                     width={500}
-                    height={600}
+                    height={500}
                     className="rounded-lg object-cover shadow-2xl"
                     data-ai-hint={bioImage.imageHint}
                   />
@@ -80,15 +83,33 @@ export default function Home() {
               Nuestras Producciones
             </h2>
             <div className="max-w-4xl mx-auto mb-12">
-              <div className="aspect-video w-full">
-                <iframe
-                  src="https://player.vimeo.com/video/12860646?h=c33c3a968a&color=D4A373&title=0&byline=0&portrait=0"
-                  className="w-full h-full"
-                  frameBorder="0"
-                  allow="autoplay; fullscreen; picture-in-picture"
-                  allowFullScreen
-                ></iframe>
-              </div>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <div className="aspect-video w-full relative group cursor-pointer">
+                    {productionVideoPoster && (
+                      <Image 
+                        src={productionVideoPoster.imageUrl}
+                        alt="Nuestras producciones"
+                        fill
+                        className="object-cover rounded-lg"
+                        data-ai-hint={productionVideoPoster.imageHint}
+                      />
+                    )}
+                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
+                      <PlayCircle className="h-24 w-24 text-white/80 transform transition-transform duration-300 group-hover:scale-110" />
+                    </div>
+                  </div>
+                </DialogTrigger>
+                <DialogContent className="max-w-4xl p-0 aspect-video">
+                  <iframe
+                    src="https://player.vimeo.com/video/12860646?h=c33c3a968a&color=D4A373&title=0&byline=0&portrait=0&autoplay=1"
+                    className="w-full h-full rounded-md"
+                    frameBorder="0"
+                    allow="autoplay; fullscreen; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </DialogContent>
+              </Dialog>
             </div>
             <Button asChild size="lg" className="bg-accent text-primary-foreground hover:bg-accent/90 font-headline tracking-widest px-10">
               <Link href="/galerias">¡DESCUBRE!</Link>

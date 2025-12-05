@@ -43,6 +43,12 @@
       "imageHint": "filmmaker camera"
     },
     {
+      "id": "production-video-poster",
+      "description": "Poster image for the main production video",
+      "imageUrl": "/images/Cape-Maclear-2.jpg",
+      "imageHint": "nature landscape"
+    },
+    {
       "id": "project-1",
       "description": "Still from a documentary about wolves",
       "imageUrl": "https://images.unsplash.com/photo-1648976287153-b30d94bb6a90?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwxfHx3b2xmJTIwbmF0dXJlfGVufDB8fHx8MTc2NDcwMTA5M3ww&ixlib.rb-4.1.0&q=80&w=1080",
