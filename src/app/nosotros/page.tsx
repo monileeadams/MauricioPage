@@ -4,7 +4,7 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { BookOpenText, Users, Award, Youtube } from 'lucide-react';
 
 export default function NosotrosPage() {
-  const heroImage = PlaceHolderImages.find((p) => p.id === 'biography-mauricio');
+  const heroImage = PlaceHolderImages.find((p) => p.id === 'nosotros-hero');
   const bioIntroImage = PlaceHolderImages.find((p) => p.id === 'bio-intro');
 
   const stats = [

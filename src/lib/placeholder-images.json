@@ -31,6 +31,12 @@
       "imageHint": "film production"
     },
     {
+      "id": "nosotros-hero",
+      "description": "Imagen de un paisaje de montaña para la página Nosotros.",
+      "imageUrl": "/images/nosotros.jpg",
+      "imageHint": "mountain landscape"
+    },
+    {
       "id": "biography-mauricio",
       "description": "Imagen de un paisaje de montaña.",
       "imageUrl": "/images/Mauricio.jpg",
@@ -225,7 +231,7 @@
     {
       "id": "cta-bg",
       "description": "Call to action background",
-      "imageUrl": "/images/AC3I3990.jpg",
+      "imageUrl": "/images/contacto.jpg",
       "imageHint": "nature water"
     },
     {
