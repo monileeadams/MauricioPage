@@ -1,12 +1,14 @@
 import Image from 'next/image';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
+import { cn } from '@/lib/utils';
 
 type PageHeroProps = {
   title: string;
   imageId: string;
+  objectPosition?: string;
 };
 
-export default function PageHero({ title, imageId }: PageHeroProps) {
+export default function PageHero({ title, imageId, objectPosition = "object-center" }: PageHeroProps) {
   const heroImage = PlaceHolderImages.find((p) => p.id === imageId);
   
   return (
@@ -16,7 +18,7 @@ export default function PageHero({ title, imageId }: PageHeroProps) {
           src={heroImage.imageUrl}
           alt={title}
           fill
-          className="object-cover"
+          className={cn("object-cover", objectPosition)}
           priority
           data-ai-hint={heroImage.imageHint}
         />

@@ -13,7 +13,7 @@ export default function RevistaPage() {
 
     return (
         <>
-            <PageHero title="Revista" imageId="magazine-hero" />
+            <PageHero title="Revista" imageId="magazine-hero" objectPosition="object-top" />
 
             <div className="container mx-auto px-4 py-24">
                 <div className="grid lg:grid-cols-12 gap-12">
