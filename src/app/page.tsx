@@ -70,7 +70,7 @@ export default function Home() {
         <section id="portfolio" className="py-24 bg-black text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-5xl mx-auto">
-                <div className="aspect-w-16 aspect-h-9 w-full mb-12">
+                <div className="aspect-video w-full mb-12">
                   <iframe 
                       src="https://player.vimeo.com/video/12860646?h=c33c3a968a&color=D4A373&title=0&byline=0&portrait=0" 
                       className="w-full h-full"
