@@ -1,4 +1,4 @@
-import type { NavLink, SocialLink, Service, Project, Post, GalleryImage, Achievement, TimelineEvent } from './types';
+import type { NavLink, SocialLink, Service, Project, Post, GalleryImage, Achievement, TimelineEvent, Video } from './types';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import { TheatreIcon, VimeoIcon, WhatsAppIcon } from '@/components/icons';
 
@@ -177,6 +177,51 @@ export const galleryImages: GalleryImage[] = [
   { id: 'gal-12', title: 'Sierra Madre Oriental', category: 'Paisajes', imageId: 'gallery-landscapes-1' },
   { id: 'gal-13', title: 'Costa de Oaxaca', category: 'Paisajes', imageId: 'gallery-landscapes-2' },
   { id: 'gal-14', title: 'Paisaje de Montaña', category: 'Paisajes', imageId: 'gallery-landscape-3' },
+];
+
+export const videoGallery: Video[] = [
+  {
+    id: 'vid-1',
+    title: 'En busca del águila elegante',
+    type: 'Mediometraje',
+    youtubeId: 'og-QOYsTTcE',
+    thumbnailId: 'video-thumb-1'
+  },
+  {
+    id: 'vid-2',
+    title: 'La cotorra serrana oriental',
+    type: 'Cortometraje',
+    youtubeId: 'MqNwizA7wc0',
+    thumbnailId: 'video-thumb-2'
+  },
+  {
+    id: 'vid-3',
+    title: 'Ecología del fuego',
+    type: 'Cortometraje',
+    youtubeId: 'M81DLdDI1HQ',
+    thumbnailId: 'video-thumb-3'
+  },
+  {
+    id: 'vid-4',
+    title: 'Historias del septentrión, la batalla del carrizal y el cachorrito carbonero',
+    type: 'Cortometraje',
+    youtubeId: 'HE7A1PyqPZo',
+    thumbnailId: 'video-thumb-4'
+  },
+  {
+    id: 'vid-5',
+    title: 'Los murciélagos de la cueva de la boca',
+    type: 'Cortometraje',
+    youtubeId: 'suiOUN8zl18',
+    thumbnailId: 'video-thumb-5'
+  },
+  {
+    id: 'vid-6',
+    title: 'Praderas del Tokio',
+    type: 'Cortometraje',
+    youtubeId: 'I7StbzrZAlU',
+    thumbnailId: 'video-thumb-6'
+  },
 ];
 
 export const achievements: Achievement[] = [

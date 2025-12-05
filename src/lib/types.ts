@@ -44,6 +44,14 @@ export type GalleryImage = {
   imageId: string;
 };
 
+export type Video = {
+  id: string;
+  title: string;
+  type: 'Mediometraje' | 'Cortometraje';
+  youtubeId: string;
+  thumbnailId: string;
+};
+
 export type Achievement = {
   year: number;
   title: string;

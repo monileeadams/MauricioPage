@@ -275,6 +275,42 @@
       "description": "Call to action background for services page",
       "imageUrl": "/images/contacto.jpg",
       "imageHint": "nature trees"
+    },
+    {
+      "id": "video-thumb-1",
+      "description": "Thumbnail for En busca del águila elegante",
+      "imageUrl": "/images/trailer-de-la-maza-En-busqueda-del-aguila-elegante.png",
+      "imageHint": "eagle documentary"
+    },
+    {
+      "id": "video-thumb-2",
+      "description": "Thumbnail for La cotorra serrana oriental",
+      "imageUrl": "/images/trailer-de-la-maza-La-cotorra-serrrana.png",
+      "imageHint": "parrot documentary"
+    },
+    {
+      "id": "video-thumb-3",
+      "description": "Thumbnail for Ecología del fuego",
+      "imageUrl": "/images/trailer-de-la-maza-Ecologia-del-fuego.png",
+      "imageHint": "fire ecology"
+    },
+    {
+      "id": "video-thumb-4",
+      "description": "Thumbnail for Historias del septentrión",
+      "imageUrl": "/images/trailer-de-la-maza-Historias-del-Septentrion-la-batalla-del-Carrizal-y-el-cachorrito-carbonero.png",
+      "imageHint": "history documentary"
+    },
+    {
+      "id": "video-thumb-5",
+      "description": "Thumbnail for Los murciélagos de la cueva de la boca",
+      "imageUrl": "/images/trailer-de-la-maza-Cueva-de-la-boca.png",
+      "imageHint": "bats cave"
+    },
+    {
+      "id": "video-thumb-6",
+      "description": "Thumbnail for Praderas del Tokio",
+      "imageUrl": "/images/trailer-de-la-maza-Pradera-del-Tokio.png",
+      "imageHint": "grassland documentary"
     }
   ]
 }
