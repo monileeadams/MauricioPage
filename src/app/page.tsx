@@ -13,6 +13,7 @@ import HistoryTimeline from "@/components/pages/home/HistoryTimeline";
 
 export default function Home() {
   const bioImage = PlaceHolderImages.find(p => p.id === 'biography-mauricio');
+  const ctaImage = PlaceHolderImages.find(p => p.id === 'cta-bg');
   const serviceIcons = {
     'Producción Audiovisual': <Camera className="h-10 w-10 text-accent" />,
     'Fotografía': <Aperture className="h-10 w-10 text-accent" />,
@@ -165,6 +166,28 @@ export default function Home() {
             </div>
           </div>
         </section>
+
+        <section className="relative py-20">
+          {ctaImage && (
+            <Image
+              src={ctaImage.imageUrl}
+              alt={ctaImage.description}
+              fill
+              className="object-cover"
+              data-ai-hint={ctaImage.imageHint}
+            />
+          )}
+          <div className="absolute inset-0 bg-black/60" />
+          <div className="relative z-10 container mx-auto px-4 text-center text-white">
+            <h2 className="font-headline text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
+              ¿Te interesa fomentar el arte, la ciencia y cultura ambiental?
+            </h2>
+            <Button asChild size="lg" className="mt-8 bg-accent text-primary-foreground hover:bg-accent/90">
+              <Link href="/contacto">Contáctanos</Link>
+            </Button>
+          </div>
+        </section>
+
       </main>
     </div>
   );

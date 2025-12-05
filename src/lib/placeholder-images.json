@@ -209,6 +209,12 @@
       "description": "A beautiful mountain landscape",
       "imageUrl": "/images/mi-paisaje.jpg",
       "imageHint": "mountain landscape"
+    },
+    {
+      "id": "cta-bg",
+      "description": "Call to action background",
+      "imageUrl": "/images/AC3I3990.jpg",
+      "imageHint": "nature water"
     }
   ]
 }
