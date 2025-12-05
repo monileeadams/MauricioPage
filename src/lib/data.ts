@@ -161,12 +161,24 @@ export const history = {
 
 export const timelineEvents: TimelineEvent[] = [
     {
-        year: 'Desde 2006- Hasta 2011',
+        year: '1994',
+        description: 'Le otorgan el "Premio a los mejores estudiantes de México" por el Comité Nacional Permanente de los Mejores Estudiantes de México'
+    },
+    {
+        year: '2006 - 2011',
         description: 'Se desempeñó como Director del Fondo Mundial para la Naturaleza.'
     },
     {
-        year: 'Desde 2011 - Hasta 2021',
+        year: '2011 - 2021',
         description: 'Se desempeñó como Director de Ciencias de la Conservación y Director General de la ONG mexicana Pronatura Noreste.'
+    },
+    {
+        year: '2014',
+        description: 'Obtiene el primer lugar en el "Premio Dr. José Álvarez Del Villar" por su tesis doctoral, otorgado por la Sociedad Mexicana de Ictiología'
+    },
+    {
+        year: '2015',
+        description: 'Logra el Premio de Investigación UANL al mejor artículo académico en Ciencias Naturales'
     },
     {
         year: '2021 - Actualidad',
