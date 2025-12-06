@@ -43,7 +43,7 @@ export default function HeroSlider() {
           Director Audiovisual & Consultoría Creativa
         </p>
         <Button asChild size="lg" className="mt-8 bg-accent text-lg text-primary-foreground hover:bg-accent/90">
-            <a href="https://panterracinefest.com" target="_blank" rel="noopener noreferrer">Conoce más</a>
+            <Link href="/servicios">Conoce más</Link>
         </Button>
       </div>
     </section>
