@@ -147,11 +147,11 @@ export const services: Service[] = [
 ];
 
 export const productionLogos: ProductionLogo[] = [
-    { src: '/images/Cora.png', alt: 'Cora Poster', width: 250, height: 375 },
-    { src: '/images/Dialogos de la muerte.png', alt: 'Diálogos de la Muerte Poster', width: 250, height: 375 },
-    { src: '/images/Wildligeconservation.png', alt: 'Wildlife Conservation Film Festival Poster', width: 250, height: 375 },
-    { src: '/images/PPPanterra-1.png', alt: 'Pantera Cine Fest Poster', width: 250, height: 375 },
-    { src: '/images/El zapato.png', alt: 'El Zapato Poster', width: 250, height: 375 },
+    { src: '/images/Cora.png', alt: 'Cora Poster', width: 500, height: 750, url: 'https://corafilm.com/' },
+    { src: '/images/Dialogos de la muerte.png', alt: 'Diálogos de la Muerte Poster', width: 500, height: 750, url: 'https://dialogosdelamuerte.com/' },
+    { src: '/images/El zapato.png', alt: 'El Zapato Poster', width: 500, height: 750, url: 'https://theshoe.info/' },
+    { src: '/images/Wildligeconservation.png', alt: 'Wildlife Conservation Film Festival Poster', width: 500, height: 750, url: 'https://wcff.org/' },
+    { src: '/images/PPPanterra-1.png', alt: 'Pantera Cine Fest Poster', width: 500, height: 750, url: 'https://panterracinefest.org/' },
 ];
 
 export const projects: Project[] = [
@@ -280,3 +280,4 @@ export const timelineEvents: TimelineEvent[] = [
     
 
     
+

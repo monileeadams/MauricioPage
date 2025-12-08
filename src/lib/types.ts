@@ -25,6 +25,7 @@ export type ProductionLogo = {
   alt: string;
   width: number;
   height: number;
+  url?: string;
 };
 
 export type Project = {
