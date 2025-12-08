@@ -75,7 +75,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section id="portfolio" className="py-16 bg-black text-white">
+        <section id="portfolio" className="py-12 bg-black text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
                 <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Portafolio</p>
