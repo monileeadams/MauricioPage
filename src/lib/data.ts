@@ -147,7 +147,6 @@ export const services: Service[] = [
 ];
 
 export const productionLogos: ProductionLogo[] = [
-    { src: '/images/cora.png', alt: 'Cora Film Poster', width: 200, height: 300 },
     { src: '/images/Dialogos de la muerte.png', alt: 'Diálogos de la Muerte Poster', width: 200, height: 300 },
     { src: '/images/Wildligeconservation.png', alt: 'Wildlife Conservation Film Festival Poster', width: 200, height: 300 },
     { src: '/images/PPPanterra-1.png', alt: 'Pantera Cine Fest Poster', width: 200, height: 300 },
@@ -277,4 +276,6 @@ export const timelineEvents: TimelineEvent[] = [
   }
 ];
     
+    
+
     
