@@ -1,36 +1,36 @@
+import Image from 'next/image';
 import { cn } from "@/lib/utils";
-
-const logos = [
-  "CORAFILM",
-  "The Shoe",
-  "WCFF",
-  "Pantera CineFest",
-  "Tubi",
-];
-
-const Logo = ({ name, className }: { name: string; className?: string }) => (
-  <li
-    className={cn(
-      "flex items-center justify-center text-center text-2xl font-bold text-gray-400",
-      className
-    )}
-  >
-    {name}
-  </li>
-);
-
+import { productionLogos } from '@/lib/data';
 
 const LogoCarousel = () => {
   return (
     <div className="w-full inline-flex flex-nowrap overflow-hidden [mask-image:_linear-gradient(to_right,transparent_0,_black_128px,_black_calc(100%-128px),transparent_100%)]">
-      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-scroll">
-        {logos.map((logo, index) => (
-          <Logo key={index} name={logo} />
+      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll">
+        {productionLogos.map((logo, index) => (
+          <li key={index} className="flex-shrink-0">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              className="object-contain"
+              style={{ filter: 'brightness(0) invert(1)', height: `${logo.height}px` }}
+            />
+          </li>
         ))}
       </ul>
-      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 [&_img]:max-w-none animate-scroll" aria-hidden="true">
-        {logos.map((logo, index) => (
-          <Logo key={index} name={logo} />
+      <ul className="flex items-center justify-center md:justify-start [&_li]:mx-8 animate-scroll" aria-hidden="true">
+        {productionLogos.map((logo, index) => (
+           <li key={index} className="flex-shrink-0">
+            <Image
+              src={logo.src}
+              alt={logo.alt}
+              width={logo.width}
+              height={logo.height}
+              className="object-contain"
+              style={{ filter: 'brightness(0) invert(1)', height: `${logo.height}px` }}
+            />
+          </li>
         ))}
       </ul>
     </div>

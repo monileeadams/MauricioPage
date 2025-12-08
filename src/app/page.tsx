@@ -17,7 +17,6 @@ import LogoCarousel from "@/components/pages/home/LogoCarousel";
 export default function Home() {
   const bioImage = PlaceHolderImages.find(p => p.id === 'biography-mauricio');
   const ctaImage = PlaceHolderImages.find(p => p.id === 'cta-bg');
-  const productionVideoPoster = PlaceHolderImages.find(p => p.id === 'production-video-poster');
 
   const serviceIcons = {
     'Producción Audiovisual': <Camera className="h-10 w-10 text-accent" />,
@@ -81,40 +80,9 @@ export default function Home() {
         <section id="portfolio" className="py-24 bg-black text-white">
           <div className="container mx-auto px-4 text-center">
             <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Portafolio</p>
-            <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-8">
+            <h2 className="font-headline text-4xl md:text-5xl font-bold text-white mb-12">
               Nuestras Producciones
             </h2>
-            <div className="max-w-4xl mx-auto mb-12">
-              <Dialog>
-                <DialogTrigger asChild>
-                  <div className="aspect-video w-full relative group cursor-pointer">
-                    {productionVideoPoster && (
-                      <Image 
-                        src={productionVideoPoster.imageUrl}
-                        alt="Nuestras producciones"
-                        fill
-                        className="object-cover rounded-lg"
-                        data-ai-hint={productionVideoPoster.imageHint}
-                      />
-                    )}
-                    <div className="absolute inset-0 bg-black/40 flex items-center justify-center rounded-lg">
-                      <PlayCircle className="h-24 w-24 text-white/80 transform transition-transform duration-300 group-hover:scale-110" />
-                    </div>
-                  </div>
-                </DialogTrigger>
-                <DialogContent className="max-w-4xl p-0 aspect-video">
-                  <DialogTitle className="sr-only">Video de Producciones</DialogTitle>
-                  <iframe
-                    src="https://player.vimeo.com/video/12860646?h=c33c3a968a&color=D4A373&title=0&byline=0&portrait=0&autoplay=1"
-                    className="w-full h-full rounded-md"
-                    frameBorder="0"
-                    allow="autoplay; fullscreen; picture-in-picture"
-                    allowFullScreen
-                    title="Video de Producciones de Terra Vision"
-                  ></iframe>
-                </DialogContent>
-              </Dialog>
-            </div>
             <LogoCarousel />
             <Button asChild size="lg" className="bg-accent text-primary-foreground hover:bg-accent/90 font-headline tracking-widest px-10 mt-12">
               <Link href="/galerias">¡DESCUBRE!</Link>

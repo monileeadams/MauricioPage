@@ -1,4 +1,4 @@
-import type { NavLink, SocialLink, Service, Project, Post, GalleryImage, Achievement, TimelineEvent, Video } from './types';
+import type { NavLink, SocialLink, Service, Project, Post, GalleryImage, Achievement, TimelineEvent, Video, ProductionLogo } from './types';
 import { Facebook, Instagram, Linkedin } from 'lucide-react';
 import { TheatreIcon, VimeoIcon, WhatsAppIcon } from '@/components/icons';
 
@@ -144,6 +144,14 @@ export const services: Service[] = [
         }
     ]
   },
+];
+
+export const productionLogos: ProductionLogo[] = [
+    { src: '/images/Cora.png', alt: 'Cora Film Logo', width: 150, height: 60 },
+    { src: '/images/Dialogos-de-la-muerte.png', alt: 'Diálogos de la Muerte Logo', width: 150, height: 80 },
+    { src: '/images/Wildligeconservation.png', alt: 'Wildlife Conservation Film Festival Logo', width: 180, height: 60 },
+    { src: '/images/Pantera-cine-fest.webp', alt: 'Pantera Cine Fest Logo', width: 150, height: 70 },
+    { src: '/images/el-zapato.webp', alt: 'The Shoe Logo', width: 150, height: 60 },
 ];
 
 export const projects: Project[] = [

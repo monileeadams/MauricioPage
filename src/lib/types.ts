@@ -20,6 +20,13 @@ export type Service = {
   }[];
 };
 
+export type ProductionLogo = {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+};
+
 export type Project = {
   id: string;
   title: string;
