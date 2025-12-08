@@ -13,21 +13,20 @@ type GalleryGridProps = {
 export default function GalleryGrid({ images }: GalleryGridProps) {
   return (
     <div>
-      <div className="columns-1 md:columns-2 gap-4 space-y-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {images.map((image) => {
           const placeholder = PlaceHolderImages.find((p) => p.id === image.imageId);
           if (!placeholder) return null;
           return (
             <Dialog key={image.id}>
               <DialogTrigger asChild>
-                <Card className="overflow-hidden cursor-pointer group break-inside-avoid">
-                    <div className="overflow-hidden">
+                <Card className="overflow-hidden cursor-pointer group">
+                    <div className="overflow-hidden aspect-video">
                         <Image
                             src={placeholder.imageUrl}
                             alt={image.title}
-                            width={500}
-                            height={500}
-                            className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
                             data-ai-hint={placeholder.imageHint}
                         />
                     </div>
