@@ -13,7 +13,7 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel"
-import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 
 export default function ProductionsCarousel() {
   return (
@@ -46,6 +46,7 @@ export default function ProductionsCarousel() {
                 </div>
               </DialogTrigger>
               <DialogContent className="max-w-3xl p-2 bg-transparent border-0">
+                 <DialogTitle className="sr-only">{logo.alt}</DialogTitle>
                  <Image
                     src={logo.src}
                     alt={logo.alt}
