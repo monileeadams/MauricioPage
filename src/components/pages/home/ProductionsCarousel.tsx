@@ -36,7 +36,7 @@ export default function ProductionsCarousel() {
               href={logo.url || '#'}
               target="_blank"
               rel="noopener noreferrer"
-              className="p-1 cursor-pointer aspect-[2/3] w-[300px] relative block"
+              className="p-1 cursor-pointer aspect-[2/3] w-[240px] relative block"
               aria-label={`Visitar sitio de ${logo.alt}`}
             >
               <Image
