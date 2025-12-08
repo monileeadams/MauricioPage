@@ -74,6 +74,14 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@layer utilities {
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

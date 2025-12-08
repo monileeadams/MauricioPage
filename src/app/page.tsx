@@ -11,6 +11,8 @@ import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TheatreIcon } from "@/components/icons";
 import HistoryTimeline from "@/components/pages/home/HistoryTimeline";
 import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
+import LogoCarousel from "@/components/pages/home/LogoCarousel";
+
 
 export default function Home() {
   const bioImage = PlaceHolderImages.find(p => p.id === 'biography-mauricio');
@@ -113,7 +115,8 @@ export default function Home() {
                 </DialogContent>
               </Dialog>
             </div>
-            <Button asChild size="lg" className="bg-accent text-primary-foreground hover:bg-accent/90 font-headline tracking-widest px-10">
+            <LogoCarousel />
+            <Button asChild size="lg" className="bg-accent text-primary-foreground hover:bg-accent/90 font-headline tracking-widest px-10 mt-12">
               <Link href="/galerias">¡DESCUBRE!</Link>
             </Button>
           </div>
