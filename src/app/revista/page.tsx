@@ -9,7 +9,7 @@ import { Search, ArrowRight, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function RevistaPage() {
-    const categories = [...new Set(posts.map(p => p.category))];
+    const categories = ['Noticias', 'Artículos', 'Entrevistas'];
 
     return (
         <>

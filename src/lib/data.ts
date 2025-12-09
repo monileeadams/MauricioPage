@@ -189,7 +189,7 @@ export const posts: Post[] = [
 <p>Podrás disfrutar esta obra de teatro en el Teatro Dramatico en Barrio Antiguo los martes 7, 14 y 21 de junio a las 8 PM. Así como verla en la pantalla grande los domingos 12, 19 y 26 de junio a las 3 PM.</p>
 `, 
     imageId: 'blog-prologo-cover-new', 
-    category: 'Colaboradores' 
+    category: 'Artículos' 
   },
   { 
     id: 'post-2', 
@@ -236,7 +236,7 @@ export const posts: Post[] = [
 </div>
 `, 
     imageId: 'blog-valle-cocora-cover', 
-    category: 'Colaboradores' 
+    category: 'Artículos' 
   },
   { 
     id: 'post-4', 
@@ -255,7 +255,7 @@ export const posts: Post[] = [
 <p>Y tú, ¿qué esperas para vivir la experiencia de “pajarear” y conocer aves increíbles?</p>
 `, 
     imageId: 'blog-aviturismo-cover', 
-    category: 'Colaboradores' 
+    category: 'Artículos' 
   },
   { 
     id: 'post-5', 
@@ -298,7 +298,7 @@ export const posts: Post[] = [
 <p>Consulta detalles y adquiere tus boletos here: <a href="https://mauriciodelamazabenignos.com/eventorufinotamayo/" target="_blank" rel="noopener noreferrer">https://mauriciodelamazabenignos.com/eventorufinotamayo/</a></p>
 `, 
     imageId: 'blog-cuatro-cienegas-cover', 
-    category: 'Colaboradores' 
+    category: 'Artículos' 
   },
   { 
     id: 'post-7', 
@@ -329,7 +329,7 @@ export const posts: Post[] = [
 <p>En conclusión, el veto presupuestal controvertido a través de las vías legales, resulta conveniente para la consecución continua de diversas actividades contempladas en el objeto social, protege intereses difusos y colectivos, prioriza los derechos humanos, y crea el ambiente idóneo, para que otros sigan un legado en forma de juicio, además de que deviene prioritario en el marco de las recentes reformas a la Ley de Impuesto sobre la renta, que lejos de combatir la simulación de actividades que aduce el Presidente de la República, restringen, por ejemplo, las actividades de las donatarias autorizadas y atentan potencialmente contra su derecho de financiamiento y de autonomía (OSC, Alternativas y Capacidades / Centro de Enlace y Desarrollo para, 2020).</p>
 `, 
     imageId: 'blog-discriminacion-ongs-cover-new', 
-    category: 'Articulos' 
+    category: 'Artículos' 
   },
   { 
     id: 'post-8', 
@@ -376,7 +376,7 @@ export const posts: Post[] = [
     <li>SEMARNAT (2016). Áreas naturales protegidas de México con decretos federales. México: Secretaría de Medio Ambiente y Recursos Naturales.</li>
     <li>Vargas, F. (2000). Parques nacionales de México. Aspectos históricos, legales y administrativos. En: Áreas naturales protegidas de México, una perspectiva. México: SEMARNAP, CONANP y PNUD.</li>
     <li>Warman, A. (2003). La reforma agraria mexicana: una visión de largo plazo. FAO.</li>
-</ul>`, imageId: 'blog-tenencia-tierra', category: 'Articulos' },
+</ul>`, imageId: 'blog-tenencia-tierra', category: 'Artículos' },
   { 
     id: 'post-10', 
     slug: 'etica-documental-naturaleza', 
@@ -452,7 +452,7 @@ export const posts: Post[] = [
 <li>Universidad de Sevilla. (2011) La ética de la comunicación a comienzo del siglo XXI. Libro de actas I congreso internacional de ética de la comunicación. Facultad de Comunicación.</li>
 </ul>`, 
     imageId: 'blog-etica-documental-cover-new', 
-    category: 'Articulos' 
+    category: 'Artículos' 
   },
 ];
 
