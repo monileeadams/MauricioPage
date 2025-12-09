@@ -261,7 +261,28 @@ export const posts: Post[] = [
     imageId: 'blog-honoris-causa', 
     category: 'Noticias' 
   },
-  { id: 'post-6', slug: 'critica-cuatro-cienegas', title: 'Crítica de “Cuatro Ciénegas y la tragedia de los comunes” por José Pablo Acevedo', date: '09 de Octubre, 2021', excerpt: 'Una reseña profunda del documental, analizando su mensaje y su impacto en la conversación ambiental.', content: 'Contenido completo...', imageId: 'blog-cuatro-cienegas', category: 'Cine' },
+  { 
+    id: 'post-6', 
+    slug: 'critica-cuatro-cienegas', 
+    title: 'Crítica de “Cuatro Ciénegas y la tragedia de los comunes” por José Pablo Acevedo', 
+    date: '09 de Octubre, 2021', 
+    excerpt: 'Una reseña profunda del documental, analizando su mensaje y su impacto en la conversación ambiental.', 
+    content: `
+<blockquote>«La ruina es el destino hacia el cual todos los hombres se apresuran, cada uno persiguiendo su propio interés en una sociedad que cree en la libertad de los bienes comunes. La libertad en un bien de uso común trae ruina a todos». Fragmento del ensayo, «La tragedia de los comunes» publicado en 1969 por Garret Hardin.</blockquote>
+<p>Este fenómeno se vive el día de hoy en el valle de Cuatro Ciénegas, ubicado en el estado de Coahuila.</p>
+<p><em>Fotografía de Mauricio De la Maza-Benignos</em></p>
+<p>Mauricio De la Maza-Benignos, biólogo, ingeniero agrónomo zootecnista, abogado y cineasta, ha dedicado gran parte de su vida al cuidado y protección de las áreas naturales, en donde la ausencia de Estado de derecho ambiental deja mucho que desear.</p>
+<p>Tal es el caso del valle de Cuatro Ciénegas, sitio enigmático por sus pozas en las cuales se “revela” el misterio evolutivo de la vida, desde hace más de 3,000 millones de años.</p>
+<p>Este sitio se encuentra en un grave riesgo de extinción, no sólo de sus increíbles pozas, sino de todo ser vivo que habita en ese lugar; debido a la impunidad y la falta de gobernanza ambientales, el uso y trasvase desmedidos del agua que ahí mana, así como las lagunas legales y la corrupción que rodean el manejo de estos humedales.</p>
+<p>Debido a todo esto y a la incesante batalla que activistas, biólogos, abogados ambientalistas y científicos han enfrentado por la preservación del sitio, De la Maza quiso evidenciar las maravillas de los humedales, así como la ausencia de justicia ambiental, en su cortometraje titulado «Cuatro Ciénegas y la tragedia de los comunes». Título que hace referencia al supuesto desarrollado por el biólogo y ecologista estadounidense Garret Hardin quien, en pocas palabras, basó su teoría en la idea de que ante la falta de reglas claras que atiendan el bien común, «aquello que es de todos, no es de nadie y por lo tanto a nadie le importa si un recurso natural al borde de su extinción o si cientos de especies están muriendo, pues si el individuo no lo aprovecha, alguien más lo hará».</p>
+<p><em>Fotografía de Mauricio De la Maza-Benignos</em></p>
+<p>En este cortometraje encontrarás bellas tomas de los ecosistemas, la flora y fauna, (por si nunca las has visitado), así como evidencias de la impunidad ambiental que reina el sitio, situación que llena de indignación a cualquiera que la vea.</p>
+<p>Este filme está próximo a estrenarse en el Wildlife Conservation Film Festival (WCFF) este próximo 17 de octubre en la Ciudad de Nueva York, EEUU. Pero no te preocupes porque este próximo 16 de octubre lo podremos ver en el Parque Rufino Tamayo en San Pedro Garza García.</p>
+<p>Consulta detalles y adquiere tus boletos aquí: <a href="https://mauriciodelamazabenignos.com/eventorufinotamayo/" target="_blank" rel="noopener noreferrer">https://mauriciodelamazabenignos.com/eventorufinotamayo/</a></p>
+`, 
+    imageId: 'blog-cuatro-cienegas', 
+    category: 'Cine' 
+  },
   { id: 'post-7', slug: 'discriminacion-ongs-ambientales', title: 'Discriminación de organizaciones promotoras y defensoras del derecho al medio ambiente sano en la política pública mexicana', date: '25 de Septiembre, 2021', excerpt: 'Una reflexión crítica sobre los obstáculos que enfrentan las ONGs ambientales en el panorama político actual.', content: 'Contenido completo...', imageId: 'blog-discriminacion-ongs', category: 'Política Ambiental' },
   { id: 'post-8', slug: 'decreto-sierra-picachos', title: 'Se publica decreto sobre Sierra de Picachos como ANP', date: '22 de Septiembre, 2021', excerpt: 'Análisis del decreto que oficializa a la Sierra de Picachos como Área Natural Protegida y lo que significa para su futuro.', content: 'Contenido completo...', imageId: 'blog-decreto-picachos', category: 'Legislación' },
   { id: 'post-9', slug: 'tenencia-legal-tierra-parques-nacionales', title: 'Tenencia legal de la tierra en Parques Nacionales', date: '22 de Septiembre, 2021', excerpt: 'Un examen de los complejos desafíos legales y sociales relacionados con la propiedad de la tierra en áreas protegidas.', content: 'Contenido completo...', imageId: 'blog-tenencia-tierra', category: 'Legislación' },
