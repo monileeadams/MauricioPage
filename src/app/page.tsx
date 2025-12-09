@@ -27,7 +27,7 @@ export default function Home() {
   const recognitionLogos = [
     { name: "IMDb", src: "/images/imdb.png", url: "https://www.imdb.com/es/name/nm14485536/" },
     { name: "FilmFreeway", src: "/images/filmlogo.png", url: "https://filmfreeway.com/MauriciodelaMazaBenignos" },
-    { name: "Wikipedia", src: "/images/wikilogo.png", url: "https://en.wikipedia.org/wiki/Mauricio_De_la_Maza-Benignos" },
+    { name: "Wikipedia", src: "https://upload.wikimedia.org/wikipedia/commons/8/80/Wikipedia-logo-v2.svg", url: "https://en.wikipedia.org/wiki/Mauricio_De_la_Maza-Benignos" },
   ];
 
   const displayedServices = services.filter(service => 
@@ -71,7 +71,7 @@ export default function Home() {
                        <Image
                         src={logo.src}
                         alt={`${logo.name} logo`}
-                        width={100}
+                        width={logo.name === 'Wikipedia' ? 120 : 100}
                         height={50}
                         className="object-contain h-12 w-auto"
                       />
