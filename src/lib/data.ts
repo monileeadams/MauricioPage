@@ -219,7 +219,9 @@ export const posts: Post[] = [
     title: 'Valle del Cocora', 
     date: '02 de Noviembre, 2021', 
     excerpt: 'Un viaje visual y reflexivo por uno de los paisajes más emblemáticos de Colombia y su importancia ecológica.', 
-    content: `<p>📸 El fotoperiodista David Jaramillo nos comparte el siguiente video del Valle de Cocora, paisaje natural en Quindío, Colombia. 🏞️</p>
+    content: `<p>Por David Jaramillo/ noviembre 2, 2021 1453 Views No Comments</p>
+<p>Colaboradores / Home</p>
+<p>📸 El fotoperiodista David Jaramillo nos comparte el siguiente video del Valle de Cocora, paisaje natural en Quindío, Colombia. 🏞️</p>
 <img src="/images/valle1.jpeg" alt="Valle del Cocora" class="my-6 rounded-lg shadow-md" />
 <p>🎥 Este video refleja la parte espiritual profunda de los antiguos pobladores de Colombia a través del arte con el metal, en la búsqueda del color del sol. Trascendiendo entre la vida y la muerte, la orfebrería encuentra en ella misma a la estrella sagrada. ☀️</p>
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto; margin-top: 1.5rem; margin-bottom: 1.5rem; border-radius: 0.5rem;">
@@ -498,3 +500,4 @@ export const timelineEvents: TimelineEvent[] = [
   { year: '2021', description: 'Recibe el Doctorado Honoris Causa por su trayectoria.' },
   { year: '2022', description: 'Produce el documental "Ad memoriam rei perpetuam".' },
 ];
+
