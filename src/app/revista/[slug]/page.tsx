@@ -1,6 +1,6 @@
 'use client';
 
-import { notFound, usePathname } from 'next/navigation';
+import { notFound, usePathname, useParams } from 'next/navigation';
 import Image from 'next/image';
 import Link from 'next/link';
 import { posts } from '@/lib/data';
@@ -8,8 +8,9 @@ import { PlaceHolderImages } from '@/lib/placeholder-images';
 import { FacebookIcon, LinkedinIcon } from '@/components/icons';
 import { siteConfig } from '@/lib/data';
 
-export default function PostPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default function PostPage() {
+  const params = useParams();
+  const slug = typeof params.slug === 'string' ? params.slug : '';
   const post = posts.find((post) => post.slug === slug);
   const pathname = usePathname();
 
