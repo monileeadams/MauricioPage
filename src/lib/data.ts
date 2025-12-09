@@ -352,7 +352,35 @@ export const posts: Post[] = [
     imageId: 'blog-decreto-picachos-cover', 
     category: 'Legislación' 
   },
-  { id: 'post-9', slug: 'tenencia-legal-tierra-parques-nacionales', title: 'Tenencia legal de la tierra en Parques Nacionales', date: '22 de Septiembre, 2021', excerpt: 'Un examen de los complejos desafíos legales y sociales relacionados con la propiedad de la tierra en áreas protegidas.', content: 'Contenido completo...', imageId: 'blog-tenencia-tierra', category: 'Legislación' },
+  { id: 'post-9', slug: 'tenencia-legal-tierra-parques-nacionales', title: 'Tenencia legal de la tierra en Parques Nacionales', date: '22 de Septiembre, 2021', excerpt: 'Un examen de los complejos desafíos legales y sociales relacionados con la propiedad de la tierra en áreas protegidas.', content: `
+<img src="/images/tenencia9.jpg" alt="Tenencia legal de la tierra" class="my-6 rounded-lg shadow-md" />
+<img src="/images/tenencia8.jpg" alt="Tenencia legal de la tierra" class="my-6 rounded-lg shadow-md" />
+<p>La tenencia de la tierra en los parques nacionales mexicanos es probablemente el mayor reto para la conservación y el manejo de dichas áreas, toda vez que, contrario a la gran mayoría de los parques nacionales del mundo, en México un gran porcentaje de la tierra dentro de los parques nacionales se encuentra en manos de particulares y no de la federación. Ello se debe, primordialmente, al hecho de que la gran mayoría de los decretos de parque nacional no consideraron la expropiación como un paso fundamental para la consolidación de estos. Al contrario, en México se ha legislado y decretado por décadas bajo la premisa de que los parques nacionales son un bien público que debe ser protegido por la federación, pero cuya tenencia puede ser de particulares.</p>
+<img src="/images/tenencia7.png" alt="Tabla 1" class="my-6 rounded-lg shadow-md" />
+<p>La historia de la tenencia de la tierra en los parques nacionales mexicanos es un tema tan interesante como complejo. La Ley Forestal de 1926 contempló por primera vez en la legislación mexicana la creación de parques nacionales. A partir de entonces, y sobre todo durante el sexenio de Lázaro Cárdenas (1934-1940), cuando se decretaron 38 de los 77 parques nacionales con los que actualmente cuenta el país, la figura de parque nacional ha sido una de las herramientas más importantes de la política de conservación en México (SEMARNAP 1996, Vargas 2000, SEMARNAT 2016).</p>
+<img src="/images/tenencia6.png" alt="Tabla 2" class="my-6 rounded-lg shadow-md" />
+<p>Durante la primera mitad del siglo XX, en México no hubo una política de tierras aparejada a la de creación de parques nacionales; es decir, en la mayoría de los casos no se expropió ni se adquirió la tierra para la federación (Vargas 2000). Al contrario, los primeros decretos fueron simplemente declaratorias que limitaban el uso de la propiedad. Ello se debió a que muchos de los primeros parques nacionales (y todavía algunos de los más recientes) fueron decretados con la intención de protegerlos de los repartos agrarios (Warman 2003, Pineda 2008).</p>
+<img src="/images/tenencia5.jpg" alt="Declaración de Estocolmo" class="my-6 rounded-lg shadow-md" />
+<p>Las declaratorias de parque nacional buscaban conservar los bosques que rodeaban a la Ciudad de México y otras importantes ciudades del país. Este fue el caso del Desierto de los Leones, el primer parque nacional de México decretado por Venustiano Carranza en 1917, cuya finalidad fue la de proteger los manantiales ahí existentes, los cuales abastecían de agua a la capital del país. También fue el caso de Cumbres de Monterrey, decretado originalmente en 1939 y re-decretado en el 2000, que hoy es el parque nacional más grande de México, con casi 180 mil hectáreas. Cumbres de Monterrey fue decretado para proteger de la expansión de la mancha urbana a las partes altas de la Sierra Madre Oriental, las cuales sirven de zona de recarga de los acuíferos que abastecen de agua a la tercera ciudad más grande de México (SEMARNAP 1996).</p>
+<p>En el caso del Parque Nacional Cumbres de Monterrey, el decreto del 2000 fue claro en establecer, en su artículo tercero, que “el establecimiento del parque nacional no implicará la expropiación de las tierras”. Al contrario, el mismo decreto faculta a la federación a promover y celebrar “acuerdos de concertación con los dueños y poseedores de los predios, así como con organizaciones sociales, públicas o privadas, con la finalidad de llevar a cabo las acciones necesarias para la conservación, restauración, protección e investigación” del parque nacional.</p>
+<img src="/images/tenencia4.png" alt="Reglamento LGEEPA" class="my-6 rounded-lg shadow-md" />
+<p>En 1988, la Ley General del Equilibrio Ecológico y Protección al Ambiente (LGEEPA) retomó el tema de la tenencia de la tierra en las áreas naturales protegidas. Sin embargo, no fue sino hasta el año 2000, con la publicación de su reglamento en materia de áreas naturales protegidas, que por primera vez la legislación mexicana estableció que “la federación, los estados y los municipios, en el ámbito de su competencia, realizarán los actos conducentes para adquirir el dominio de los terrenos que se requieran para el establecimiento, administración y desarrollo de las áreas naturales protegidas de su competencia” (Reglamento de la LGEEPA, en materia de ANP, artículo 21).</p>
+<img src="/images/tenencia3.png" alt="Tabla 3" class="my-6 rounded-lg shadow-md" />
+<p>Es importante señalar que la LGEEPA y su reglamento no distinguen entre las distintas categorías de áreas naturales protegidas para efectos de la tenencia de la tierra. Así, un parque nacional es tratado de la misma manera que un área de protección de flora y fauna, o una reserva de la biosfera. Sin embargo, en la práctica, no todos los tipos de área natural protegida requieren de la misma aproximación para el manejo del tema de la tenencia. Los parques nacionales, por ejemplo, al ser por lo general zonas núcleo que, de acuerdo con la Unión Mundial para la Conservación de la Naturaleza (UICN), deberían de ser propiedad de la nación (Vargas 2000), tendrían que ser objeto de una política de adquisición de tierras mucho más proactiva que la de otras categorías, como las reservas de la biosfera, en donde las actividades productivas de bajo impacto, incluyendo la agricultura y la ganadería, son permitidas en ciertas zonas de amortiguamiento (SEMARNAT 2016).</p>
+<img src="/images/tenencia2.png" alt="Tabla de implicaciones" class="my-6 rounded-lg shadow-md" />
+<p>Actualmente, de los 77 parques nacionales de México, por lo menos 37 de ellos (casi la mitad) presentan algún tipo de conflicto relacionado con la tenencia de la tierra. Dichos conflictos van desde invasiones y asentamientos humanos irregulares, hasta la tenencia legítima de la tierra por parte de particulares (CONANP 2018). Ello quiere decir que en más de la mitad de los parques nacionales de México, el gobierno federal no tiene la certeza jurídica que le permita invertir en su conservación y manejo, con el riesgo de que dichas inversiones se pierdan o no tengan el efecto deseado, al no ser el gobierno federal el propietario legítimo de las tierras.</p>
+<p>Ante esta problemática, es indispensable que la CONANP, y la SEMARNAT en general, diseñen e implementen una estrategia de adquisición de tierras en parques nacionales que incluya, entre otros, los siguientes elementos: a) un diagnóstico preciso sobre la tenencia de la tierra en cada uno de los 77 parques nacionales de México; b) un plan de adquisición de tierras a corto, mediano y largo plazos, con metas claras y un presupuesto asignado para tal efecto; y c) un programa de monitoreo y evaluación de los avances y resultados del plan de adquisición.  Sin una estrategia clara y un presupuesto asignado para tal efecto, difícilmente se podrá avanzar en la consolidación de los parques nacionales de México, los cuales seguirán siendo, en muchos casos, “parques de papel”, con un futuro incierto en cuanto a su conservación a largo plazo.</p>
+<img src="/images/tenencia1.jpg" alt="Recomendación" class="my-6 rounded-lg shadow-md" />
+<h4>Referencias</h4>
+<ul>
+    <li>CONANP (2018). Comunicación personal con personal de la Dirección de Asuntos Jurídicos de la Comisión Nacional de Áreas Naturales Protegidas. Ciudad de México.</li>
+    <li>Pineda, F. (2008). La política de creación de áreas naturales protegidas en México. Gaceta Ecológica, (87), 45-58.</li>
+    <li>SEMARNAP (1996). Programa de áreas naturales protegidas de México, 1995-2000. México: Secretaría de Medio Ambiente, Recursos Naturales y Pesca.</li>
+    <li>SEMARNAT (2016). Áreas naturales protegidas de México con decretos federales. México: Secretaría de Medio Ambiente y Recursos Naturales.</li>
+    <li>Vargas, F. (2000). Parques nacionales de México. Aspectos históricos, legales y administrativos. En: Áreas naturales protegidas de México, una perspectiva. México: SEMARNAP, CONANP y PNUD.</li>
+    <li>Warman, A. (2003). La reforma agraria mexicana: una visión de largo plazo. FAO.</li>
+</ul>
+`, imageId: 'blog-tenencia-tierra', category: 'Legislación' },
   { 
     id: 'post-10', 
     slug: 'etica-documental-naturaleza', 
@@ -420,7 +448,7 @@ export const posts: Post[] = [
 <h4>Bibliografía:</h4>
 <ul>
 <li>Boswall, J. (1997).The Moral Pivots of Wildlife Filmmaking. EBU Diffusion (Summer):9-12.</li>
-<li>Coughlan, S. (2010). Animals need 'right to privacy' from wildlife films. BBC News. https://www.bbc.com/news/10093327</li>
+<li>Coughlan, S. (2010). Animals need ‘right to privacy’ from wildlife films. BBC News. https://www.bbc.com/news/10093327</li>
 <li>Christopher J. Preston & Wayne Ouderkirk (2006) Nature, Value, Duty: Life on Earth with Holmes Rolston, III. Springer Science & Business Media, 280 pp.</li>
 <li>Leopold, A. (1949). The Land Ethic. https://www.uky.edu/~rsand1/china2017/library/Leopold1.pdf</li>
 <li>Life (S.F.) The Photography of John Dominis. https://www.life.com/photographer/john-dominis/</li>
@@ -429,8 +457,7 @@ export const posts: Post[] = [
 <li>Palmer, C. (2011). Salvaje: Documentalistas de la Naturaleza Necesitan un Codigo de Conducta. International Documentary Association. https://www.documentary.org/feature/la-etica-dentro-de-la-vida-salvaje-documentalistas-de-la-naturaleza-necesitan-un-codigo-de</li>
 <li>Taylor, P.W. (1986). Respect for Nature: A Theory of Environmental Ethics. Princeton University Press, 329 pp.</li>
 <li>Universidad de Sevilla. (2011) La ética de la comunicación a comienzo del siglo XXI. Libro de actas I congreso internacional de ética de la comunicación. Facultad de Comunicación.</li>
-</ul>
-`, 
+</ul>`, 
     imageId: 'blog-etica-documental-cover', 
     category: 'Cine' 
   },

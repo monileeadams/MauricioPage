@@ -127,6 +127,12 @@
       "imageHint": "mountain range"
     },
     {
+      "id": "blog-tenencia-tierra",
+      "description": "Imagen para el artículo de tenencia legal de la tierra",
+      "imageUrl": "/images/tenencia9.jpg",
+      "imageHint": "land ownership"
+    },
+    {
       "id": "blog-etica-documental-cover",
       "description": "Imagen para el artículo sobre ética en documentales de naturaleza",
       "imageUrl": "/images/etica4.jpg",
