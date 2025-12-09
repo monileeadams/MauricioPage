@@ -43,7 +43,7 @@ export type Post = {
   excerpt: string;
   content: string;
   imageId: string;
-  category: string;
+  category: 'Articulos' | 'Colaboradores' | 'Entrevistas' | 'Noticias';
 };
 
 export type GalleryImage = {

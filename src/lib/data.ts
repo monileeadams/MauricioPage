@@ -189,7 +189,7 @@ export const posts: Post[] = [
 <p>Podrás disfrutar esta obra de teatro en el Teatro Dramatico en Barrio Antiguo los martes 7, 14 y 21 de junio a las 8 PM. Así como verla en la pantalla grande los domingos 12, 19 y 26 de junio a las 3 PM.</p>
 `, 
     imageId: 'blog-prologo-cover-new', 
-    category: 'Literatura' 
+    category: 'Colaboradores' 
   },
   { 
     id: 'post-2', 
@@ -212,7 +212,7 @@ export const posts: Post[] = [
 <p>Felicitamos a las autoridades, al Gobierno del Estado, a la Secretaría de Desarrollo Sustentable y a la Asociación Ecológica de Sierra de Picachos por su compromiso en la conservación de uno de los pulmones más grandes de Nuevo León, que llenará de beneficios ambientales y sociales a nuestro estado.</p>
 `, 
     imageId: 'blog-consejo-tecnico-cover-new', 
-    category: 'Conservación' 
+    category: 'Noticias' 
   },
   { 
     id: 'post-3', 
@@ -236,7 +236,7 @@ export const posts: Post[] = [
 </div>
 `, 
     imageId: 'blog-valle-cocora-cover', 
-    category: 'Viajes' 
+    category: 'Colaboradores' 
   },
   { 
     id: 'post-4', 
@@ -255,7 +255,7 @@ export const posts: Post[] = [
 <p>Y tú, ¿qué esperas para vivir la experiencia de “pajarear” y conocer aves increíbles?</p>
 `, 
     imageId: 'blog-aviturismo-cover', 
-    category: 'Turismo Sostenible' 
+    category: 'Colaboradores' 
   },
   { 
     id: 'post-5', 
@@ -298,7 +298,7 @@ export const posts: Post[] = [
 <p>Consulta detalles y adquiere tus boletos aquí: <a href="https://mauriciodelamazabenignos.com/eventorufinotamayo/" target="_blank" rel="noopener noreferrer">https://mauriciodelamazabenignos.com/eventorufinotamayo/</a></p>
 `, 
     imageId: 'blog-cuatro-cienegas-cover', 
-    category: 'Cine' 
+    category: 'Colaboradores' 
   },
   { 
     id: 'post-7', 
@@ -329,7 +329,7 @@ export const posts: Post[] = [
 <p>En conclusión, el veto presupuestal controvertido a través de las vías legales, resulta conveniente para la consecución continua de diversas actividades contempladas en el objeto social, protege intereses difusos y colectivos, prioriza los derechos humanos, y crea el ambiente idóneo, para que otros sigan un legado en forma de juicio, además de que deviene prioritario en el marco de las recientes reformas a la Ley de Impuesto sobre la renta, que lejos de combatir la simulación de actividades que aduce el Presidente de la República, restringen, por ejemplo, las actividades de las donatarias autorizadas y atentan potencialmente contra su derecho de financiamiento y de autonomía (OSC, Alternativas y Capacidades / Centro de Enlace y Desarrollo para, 2020).</p>
 `, 
     imageId: 'blog-discriminacion-ongs-cover-new', 
-    category: 'Política Ambiental' 
+    category: 'Colaboradores' 
   },
   { 
     id: 'post-8', 
@@ -352,7 +352,7 @@ export const posts: Post[] = [
 <p>Es importante manifestar nuestro reconocimiento y agradecimiento al Gobernador del Estado, Ing. Jaime Rodríguez Calderón y a la Secretaría de Desarrollo Sustentable por su apoyo incondicional en esta acción que traerá grandes beneficios ambientales y sociales para Nuevo León.</p>
 `, 
     imageId: 'blog-decreto-picachos-cover', 
-    category: 'Legislación' 
+    category: 'Noticias' 
   },
   { id: 'post-9', slug: 'tenencia-legal-tierra-parques-nacionales', title: 'Tenencia legal de la tierra en Parques Nacionales', date: '22 de Septiembre, 2021', excerpt: 'Un examen de los complejos desafíos legales y sociales relacionados con la propiedad de la tierra en áreas protegidas.', content: `<img src="/images/tenencia 9.jpg" alt="Tenencia legal de la tierra" class="my-6 rounded-lg shadow-md" />
 <p>La tenencia de la tierra en los parques nacionales mexicanos es probablemente el mayor reto para la conservación y el manejo de dichas áreas, toda vez que, contrario a la gran mayoría de los parques nacionales del mundo, en México un gran porcentaje de la tierra dentro de los parques nacionales se encuentra en manos de particulares y no de la federación. Ello se debe, primordialmente, al hecho de que la gran mayoría de los decretos de parque nacional no consideraron la expropiación como un paso fundamental para la consolidación de estos. Al contrario, en México se ha legislado y decretado por décadas bajo la premisa de que los parques nacionales son un bien público que debe ser protegido por la federación, pero cuya tenencia puede ser de particulares.</p>
@@ -381,7 +381,7 @@ export const posts: Post[] = [
     <li>Vargas, F. (2000). Parques nacionales de México. Aspectos históricos, legales y administrativos. En: Áreas naturales protegidas de México, una perspectiva. México: SEMARNAP, CONANP y PNUD.</li>
     <li>Warman, A. (2003). La reforma agraria mexicana: una visión de largo plazo. FAO.</li>
 </ul>
-`, imageId: 'blog-tenencia-tierra', category: 'Legislación' },
+`, imageId: 'blog-tenencia-tierra', category: 'Articulos' },
   { 
     id: 'post-10', 
     slug: 'etica-documental-naturaleza', 
@@ -444,7 +444,7 @@ export const posts: Post[] = [
 <p>El cineasta de naturaleza debería aproximarse hacia los ecosistemas, paisajes y sus componentes, incluyendo su flora y fauna con gran respeto a la hora de documentar y siempre preguntarse: ¿El fin justifica los medios?</p>
 <p>Frente a las expectativas del público, las tomas espectaculares de naturaleza exigen decisiones con alto grado ético que en muchas ocasiones ponen al documentalista íntegro en una clara desventaja frente al documentalista deshonesto.</p>
 <p>Partiendo de la imposibilidad, salvo en raras ocasiones de filmar aspectos de la naturaleza sin interferir en los procesos naturales, debido a la presencia misma del equipo de filmación, ¿hasta qué punto resulta aceptable invadir paisajes o los espacios vitales de los otros seres vivos para captar momentos dramáticos? En el caso de los montajes, por ejemplo, cuando se utilizan animales en cautiverio, ¿cómo se debe abordar el tema sin engañar al público?</p>
-<img src="/images/etica4.jpg" alt="Cineasta en acción" class="my-6 rounded-lg shadow-md" />
+<img src="/images/etica 4.jpg" alt="Cineasta en acción" class="my-6 rounded-lg shadow-md" />
 <p>Y citando a Palmer (2011), “el documentalista de vida silvestre tiene la responsabilidad de mostrar el mundo natural como es y de una manera en la que inspire a la gente a preservarlo”. No se vale engañar. Desde mi perspectiva, es un deber informar al público acerca del uso de “trucos” cinematográficos en el documental, incluyendo el uso de Foleys o efectos especiales, pues solo así, podemos evitar caer en el engaño y la manipulación de audiencias.</p>
 <h4>Bibliografía:</h4>
 <ul>
@@ -461,7 +461,7 @@ export const posts: Post[] = [
 </ul>
 `, 
     imageId: 'blog-etica-documental-cover-new', 
-    category: 'Cine' 
+    category: 'Articulos' 
   },
 ];
 
@@ -511,6 +511,7 @@ export const timelineEvents: TimelineEvent[] = [
   { year: '2021', description: 'Recibe el Doctorado Honoris Causa por su trayectoria.' },
   { year: '2022', description: 'Produce el documental "Ad memoriam rei perpetuam".' },
 ];
+
 
 
 
