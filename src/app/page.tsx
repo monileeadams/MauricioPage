@@ -26,7 +26,7 @@ export default function Home() {
 
   const recognitionLogos = [
     { name: "IMDb", src: "/images/imdb.png", url: "https://www.imdb.com/es/name/nm14485536/" },
-    { name: "People AI", src: "/images/People Ai.png", url: "https://peopleai.com/fame/identities/mauricio-de-la-maza-benignos" },
+    { name: "People AI", src: "/images/People AI.png", url: "https://peopleai.com/fame/identities/mauricio-de-la-maza-benignos" },
     { name: "Celebrity Birthdays", src: "/images/Celebrity.png", url: "https://celebrity-birthdays.com/people/mauricio-de-la-maza-benignos" },
     { name: "Everything Explained", src: "/images/Brain.gif", url: "https://everything.explained.today/Mauricio_De_la_Maza-Benignos/" },
   ];
@@ -68,7 +68,7 @@ export default function Home() {
               <div className="order-1 md:order-2 flex flex-col items-center justify-center">
                  <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
                   {recognitionLogos.map((logo) => (
-                    <Link key={logo.name} href={logo.url} target="_blank" rel="noopener noreferrer" className="grayscale hover:grayscale-0 transition-all">
+                    <Link key={logo.name} href={logo.url} target="_blank" rel="noopener noreferrer" className="transition-all">
                        <Image
                         src={logo.src}
                         alt={`${logo.name} logo`}
