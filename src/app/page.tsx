@@ -71,9 +71,9 @@ export default function Home() {
                        <Image
                         src={logo.src}
                         alt={`${logo.name} logo`}
-                        width={logo.name === 'Wikipedia' ? 80 : 80}
-                        height={40}
-                        className="object-contain h-10 w-auto"
+                        width={100}
+                        height={50}
+                        className="object-contain h-12 w-auto"
                       />
                     </Link>
                   ))}
