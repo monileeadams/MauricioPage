@@ -76,4 +76,5 @@ export type Collaborator = {
   name: string;
   title: string;
   bio: string;
+  image: string | null;
 };
