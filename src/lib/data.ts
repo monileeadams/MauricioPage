@@ -228,7 +228,23 @@ export const posts: Post[] = [
     imageId: 'blog-cocora', 
     category: 'Viajes' 
   },
-  { id: 'post-4', slug: 'aviturismo-nuevo-leon', title: 'El aviturismo en Nuevo León: su potencial económico y de conservación', date: '27 de Octubre, 2021', excerpt: 'Análisis sobre cómo el turismo de observación de aves puede impulsar la economía local y proteger la biodiversidad.', content: 'Contenido completo...', imageId: 'blog-aviturismo', category: 'Turismo Sostenible' },
+  { 
+    id: 'post-4', 
+    slug: 'aviturismo-nuevo-leon', 
+    title: 'El aviturismo en Nuevo León: su potencial económico y de conservación', 
+    date: '27 de Octubre, 2021', 
+    excerpt: 'Análisis sobre cómo el turismo de observación de aves puede impulsar la economía local y proteger la biodiversidad.', 
+    content: `
+<p>Por Leonardo Guzmán y Marilyn Castillo de Kingfisher Birdwatching Nuevo León</p>
+<p>¿Alguna vez has visto en la televisión, películas o libros, alguna persona o grupo de personas que andan por ahí buscando pájaros? ¿O te has preguntado qué hace esa persona con binoculares y/o cámara mientras el resto de la gente sale a hacer ejercicio? Quizás te hayas topado con alguien en el parque, el río o la montaña, quien con mucha paciencia y emoción espera a que salgan los pájaros desde temprano para observarlos a través de sus binoculares, identificarlos y, de ser posible, tomar fotografías.</p>
+<p>Observar aves es referido como el arte de reconocer a las distintas especies de aves a través de sus cantos, plumajes o comportamiento. Esta actividad puede sonar fácil ya que se piensa que simplemente “hay que salir al monte a ver pájaros”, sin embargo, va mucho más allá que esto. La observación de aves o “birdwatching” trae consigo numerosos beneficios para aquellos que la practican que van desde un bienestar físico y emocional, un mejor aprendizaje sobre nuestra biodiversidad y el entorno natural a escala local, así como una mayor sensibilización sobre las problemáticas ambientales que enfrentan las aves en sus ecosistemas y realizar aportes a la ornitología a través de las plataformas de ciencia ciudadana.</p>
+<p>Adicionalmente, es importante destacar que la observación de aves representa una actividad con alto potencial económico, dado que muchos de quienes la practican realizan viajes fuera de su municipio, estado o país, convirtiéndose en aviturismo o también llamado turismo de observación de aves. El aviturismo implica desplazarse desde un sitio de origen hacia un destino específico con el interés de observar la avifauna local en su entorno natural. Esos viajes implican el hospedaje y la alimentación en la localidad, pagos por transportación, contratación de guías locales, y todo lo relacionado a servicios turísticos en general. Esta derrama económica incita a que exista un interés por la protección de los espacios naturales donde estas aves pueden ser avistadas por lo que el aviturismo incita y estimula la conservación de estos sitios. Tan solo en el 2019, el aviturismo género un total de $4,452,294,489 de pesos para el país a través de la observación de aves acuáticas y marinas.</p>
+<p>En los últimos años, el interés por la observación de aves ha crecido considerablemente, registrándose hasta la fecha 471 especies de aves para Nuevo León en la plataforma de ciencia ciudadana eBird.  Por su parte, Kingfisher Birdwatching Nuevo León nace en 2016 con la inquietud de contribuir al conocimiento sobre la avifauna estatal con la sociedad, promover la observación de aves como una herramienta para la educación ambiental e impulsar el aviturismo en el estado como una alternativa económica y de conservación de la biodiversidad. Kingfisher ofrece experiencias únicas e inolvidables a través de sus tours para observación de aves en diferentes localidades de Nuevo León a lo largo de todo el año.</p>
+<p>Y tú, ¿qué esperas para vivir la experiencia de “pajarear” y conocer aves increíbles?</p>
+`, 
+    imageId: 'blog-aviturismo', 
+    category: 'Turismo Sostenible' 
+  },
   { id: 'post-5', slug: 'doctor-honoris-causa', title: 'Otorga el Claustro Doctoral el grado de Doctor Honoris Causa a Mauricio de la Maza-Benignos', date: '25 de Octubre, 2021', excerpt: 'Un reconocimiento a la trayectoria y contribuciones en el campo de la biología y el desarrollo sustentable.', content: 'Contenido completo...', imageId: 'blog-honoris-causa', category: 'Noticias' },
   { id: 'post-6', slug: 'critica-cuatro-cienegas', title: 'Crítica de “Cuatro Ciénegas y la tragedia de los comunes” por José Pablo Acevedo', date: '09 de Octubre, 2021', excerpt: 'Una reseña profunda del documental, analizando su mensaje y su impacto en la conversación ambiental.', content: 'Contenido completo...', imageId: 'blog-cuatro-cienegas', category: 'Cine' },
   { id: 'post-7', slug: 'discriminacion-ongs-ambientales', title: 'Discriminación de organizaciones promotoras y defensoras del derecho al medio ambiente sano en la política pública mexicana', date: '25 de Septiembre, 2021', excerpt: 'Una reflexión crítica sobre los obstáculos que enfrentan las ONGs ambientales en el panorama político actual.', content: 'Contenido completo...', imageId: 'blog-discriminacion-ongs', category: 'Política Ambiental' },
@@ -347,4 +363,5 @@ export const timelineEvents: TimelineEvent[] = [
     
 
     
+
 
