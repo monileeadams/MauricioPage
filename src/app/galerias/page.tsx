@@ -19,7 +19,7 @@ export default function GaleriasPage() {
         <div className="text-center mb-16">
             <h2 className="font-headline text-4xl md:text-5xl font-bold">Explora Nuestro Mundo Visual</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
-                Un recorrido por nuestra trayectoria visual: desde la narrativa cinematográfica de ficción hasta la contemplación profunda de la naturaleza y el registro documental.
+                Una selección de momentos capturados a través de nuestro lente, desde la majestuosidad de la vida silvestre hasta la emoción detrás de cámaras.
             </p>
         </div>
 
