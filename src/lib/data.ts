@@ -1,4 +1,3 @@
-
 import type { NavLink, SocialLink, Service, Project, Post, GalleryImage, Achievement, TimelineEvent, Video, ProductionLogo, Collaborator } from './types';
 import { Facebook, Instagram, Linkedin, Youtube } from 'lucide-react';
 import { TheatreIcon, VimeoIcon, WhatsAppIcon } from '@/components/icons';
@@ -61,8 +60,9 @@ export const biography = {
     text: "Su trabajo musical se desarrolla en paralelo, pero nunca separado del universo cinematográfico. Parte de una premisa narrativa: la música no acompaña la imagen, la completa.",
     details: "La composición surge desde la atmósfera y la tensión emocional. Ambient, escritura orquestal minimalista, exploración experimental y texturas contemporáneas convergen en estructuras que dialogan con el conflicto interior de los personajes. Se privilegian procesos graduales, respiraciones largas y decisiones que, en ciertos momentos, pueden incluso contradecir la imagen para profundizarla.",
     concept: "La música respira con la historia.",
-    recognition: "Parte de su obra ha sido reconocida en contextos vinculados al circuito audiovisual independiente, incluyendo distinciones relacionadas con Best Original Score y menciones en festivales internacionales donde su música acompaña proyectos seleccionados.",
-    platforms: "Su catálogo está disponible en plataformas digitales como Spotify, Apple Music y Bandcamp, extendiendo su circulación a públicos y profesionales del ámbito audiovisual en distintas partes del mundo."
+    recognition: "Parte de su obra ha sido reconocida en contextos vinculados al circuito audiovisual independiente, incluyendo disticones relacionadas con Best Original Score y menciones en festivales internacionales donde su música acompaña proyectos seleccionados.",
+    platforms: "Su catálogo está disponible en plataformas digitales como Spotify, Apple Music y Bandcamp, extendiendo su circulación a públicos y profesionales del ámbito audiovisual en distintas partes del mundo.",
+    platformsLinks: "Disponible en Spotify, Apple Music y Bandcamp"
   },
   architecture: {
     title: "Una arquitectura unificada",
@@ -73,109 +73,103 @@ export const biography = {
 
 export const services: Service[] = [
   {
-    title: 'Producción Audiovisual',
+    title: 'Cine de Ficción y Documental',
     imageId: 'service-audiovisual',
-    summary: 'Documentales, videos institucionales y contenido digital con enfoque en naturaleza y conservación.',
+    summary: 'Narrativas que transitan entre el documental ambiental de tono poético y la ficción de carácter introspectivo.',
     details: [
         {
-            title: "Producción de Contenido",
-            description: "Creamos contenido audiovisual de alto impacto para diversas plataformas.",
+            title: "Producción Cinematográfica",
+            description: "Exploramos aquello que no siempre es visible: la culpa, la memoria, el miedo y el deseo.",
             items: [
-                "Documentales de naturaleza y conservación",
-                "Videos institucionales y corporativos",
-                "Proyectos especiales en colaboración con productoras como BBC Nature",
-                "Largometrajes y cortometrajes documentales"
+                "Documentales ambientales de tono poético y contemplativo",
+                "Largometrajes de ficción de carácter introspectivo",
+                "Cine de autor centrado en el drama psicológico y filosófico",
+                "Narrativas de naturaleza y diversidad humana"
             ]
         }
     ]
   },
   {
-    title: 'Fotografía',
+    title: 'Composición y Diseño Sonoro',
+    imageId: 'service-editing',
+    summary: 'La música no acompaña la imagen, la completa. Creamos atmósferas que dialogan con el conflicto interior.',
+    details: [
+        {
+            title: "Música y Sonido",
+            description: "Construimos una arquitectura sonora unificada que respira con la historia.",
+            items: [
+                "Original Scores para cine y medios audiovisuales",
+                "Composición de texturas contemporáneas y ambient",
+                "Diseño de atmósferas y tensión emocional sonora",
+                "Arquitectura dramática unificada (imagen y sonido)"
+            ]
+        }
+    ]
+  },
+  {
+    title: 'Fotografía Contemplativa',
     imageId: 'service-photography',
-    summary: 'Capturamos la esencia de la naturaleza, eventos y proyectos con una visión artística y profesional.',
+    summary: 'Las imágenes no solo narran: interrogan. Capturamos aquello que late bajo la superficie.',
      details: [
         {
-            title: "Servicios Fotográficos",
-            description: "Cobertura fotográfica profesional para una variedad de necesidades.",
+            title: "Mirada Fotográfica",
+            description: "Búsqueda de la esencia a través de la luz y el silencio.",
             items: [
                 "Fotografía de naturaleza y vida silvestre",
-                "Fotografía de eventos corporativos y conferencias",
-                "Fotografía institucional y de producto",
-                "Retratos profesionales y de equipo",
-                "Cobertura de expediciones científicas y de aventura"
+                "Retratos que exploran la condición humana",
+                "Documentación visual de ecosistemas vulnerables",
+                "Fotografía de autor para proyectos artísticos"
             ]
         }
     ]
   },
-    {
-    title: 'Cultura',
+  {
+    title: 'Gestión Cultural y Ética',
     imageId: 'service-culture',
-    summary: 'Fomentamos la cultura ambiental a través de festivales, talleres y eventos educativos.',
+    summary: 'Proyectos que fusionan arte, pensamiento crítico y una dimensión ética para la reflexión ambiental.',
     details: [
         {
-            title: "Gestión y Educación Cultural",
-            description: "Diseñamos y ejecutamos proyectos que fusionan cultura y medio ambiente.",
+            title: "Proyectos Culturales",
+            description: "Fomentamos una relación consciente entre el ser humano y su entorno.",
             items: [
-                "Curaduría y organización de festivales de cine ambiental",
-                "Talleres de cine de naturaleza y conservación para jóvenes y adultos",
-                "Conferencias y charlas motivacionales sobre medio ambiente y cine",
-                "Desarrollo de eventos culturales con enfoque ambiental para empresas e instituciones",
-                "Proyectos educativos y de divulgación científica a través del arte"
+                "Curaduría de festivales de cine con propósito",
+                "Talleres de cine de naturaleza y narrativa sensible",
+                "Conferencias sobre ética, arte y medio ambiente",
+                "Desarrollo de proyectos culturales de impacto social"
             ]
         }
     ]
   },
   {
-    title: 'Consultoría',
+    title: 'Consultoría Ambiental Estratégica',
     imageId: 'service-consulting',
-    summary: 'Asesoría experta en conservación, desarrollo sustentable y gestión de proyectos ambientales.',
+    summary: 'Asesoría experta que integra ciencia y ética para proponer soluciones conscientes de conservación.',
     details: [
         {
-            title: "Asesoría Ambiental Estratégica",
-            description: "Ofrecemos soluciones expertas para los desafíos ambientales contemporáneos.",
+            title: "Asesoría de Impacto",
+            description: "Mirada experta para la protección y resguardo de los derechos del medio ambiente.",
             items: [
-                "Consultoría en desarrollo sustentable y políticas públicas",
-                "Asesoría en conservación de ecosistemas y biodiversidad",
-                "Análisis legal y normativo en materia ambiental",
-                "Planificación estratégica para organizaciones de la sociedad civil (ONGs)",
-                "Evaluación de impacto ambiental y social de proyectos",
-                "Gestión de proyectos de conservación y recaudación de fondos"
+                "Consultoría en conservación de biodiversidad y ecosistemas",
+                "Estrategias de desarrollo sustentable con visión ética",
+                "Asesoría técnica y legal para ONGs y sector público",
+                "Evaluación de impacto ambiental y social"
             ]
         }
     ]
   },
   {
-    title: 'Contenido Digital',
+    title: 'Dirección Creativa Narrativa',
     imageId: 'service-digital',
-    summary: 'Creación y estrategia de contenido para plataformas digitales, maximizando el alcance y la interacción.',
+    summary: 'Desarrollamos proyectos con propósito, integrando nuevas ideas para proteger el mundo natural.',
     details: [
         {
-            title: "Estrategias Digitales",
-            description: "Desarrollamos y ejecutamos estrategias de contenido para el mundo digital.",
+            title: "Dirección y Visión",
+            description: "Acompañamos sueños y mejoras para el mundo natural a través de la creatividad.",
             items: [
-                "Creación de contenido para redes sociales (cápsulas, reels, etc.)",
-                "Gestión de campañas de comunicación digital",
-                "Estrategia de posicionamiento de marca en línea",
-                "Producción de podcasts y series web",
-                "Marketing de contenidos con enfoque ambiental y social"
-            ]
-        }
-    ]
-  },
-  {
-    title: 'Video Editing',
-    imageId: 'service-editing',
-    summary: 'Post-producción profesional para dar vida a tus proyectos audiovisuales con las últimas tecnologías y un enfoque creativo.',
-    details: [
-        {
-            title: "Post-Producción de Video",
-            description: "Servicios completos de edición y post-producción para cine, TV y web.",
-            items: [
-                "Edición de video y montaje narrativo",
-                "Corrección de color y etalonaje cinematográfico",
-                "Diseño y mezcla de sonido profesional",
-                "Creación de gráficos en movimiento (motion graphics) y efectos visuales (VFX) básicos",
-                "Masterización y entrega para diversas plataformas (cine, broadcast, web)"
+                "Dirección creativa para contenidos de alto impacto",
+                "Estrategias de comunicación digital con base científica y artística",
+                "Producción de series web y cápsulas narrativas",
+                "Desarrollo de conceptos para proyectos de conservación"
             ]
         }
     ]

@@ -1,11 +1,10 @@
-
 'use client';
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ArrowRight, Camera, FileText, Aperture, Quote, Music } from "lucide-react";
+import { ArrowRight, Camera, FileText, Aperture, Quote, Music, Film } from "lucide-react";
 import { services, posts, biography } from "@/lib/data";
 import HeroSlider from "@/components/pages/home/HeroSlider";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
@@ -18,10 +17,10 @@ export default function Home() {
   const ctaImage = PlaceHolderImages.find(p => p.id === 'cta-bg');
 
   const serviceIcons = {
-    'Producción Audiovisual': <Camera className="h-10 w-10 text-accent" />,
-    'Fotografía': <Aperture className="h-10 w-10 text-accent" />,
-    'Cultura': <TheatreIcon className="h-10 w-10 text-accent" />,
-    'Consultoría': <FileText className="h-10 w-10 text-accent" />,
+    'Cine de Ficción y Documental': <Film className="h-10 w-10 text-accent" />,
+    'Composición y Diseño Sonoro': <Music className="h-10 w-10 text-accent" />,
+    'Fotografía Contemplativa': <Aperture className="h-10 w-10 text-accent" />,
+    'Consultoría Ambiental Estratégica': <FileText className="h-10 w-10 text-accent" />,
   };
 
   const recognitionLogos = [
@@ -31,7 +30,7 @@ export default function Home() {
   ];
 
   const displayedServices = services.filter(service => 
-    ['Producción Audiovisual', 'Fotografía', 'Cultura', 'Consultoría'].includes(service.title)
+    ['Cine de Ficción y Documental', 'Composición y Diseño Sonoro', 'Fotografía Contemplativa', 'Consultoría Ambiental Estratégica'].includes(service.title)
   );
 
   return (
