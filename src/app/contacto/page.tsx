@@ -8,7 +8,7 @@ import { WhatsAppIcon } from "@/components/icons";
 export default function ContactoPage() {
     return (
         <>
-            <PageHero title="Contacto" imageId="contact-hero" />
+            <PageHero title="Contacto" imageId="contact-hero" objectPosition="object-top" />
 
             <section className="py-24">
                 <div className="container mx-auto px-4">
