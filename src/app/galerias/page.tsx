@@ -1,4 +1,3 @@
-
 'use client';
 
 import PageHero from "@/components/common/PageHero";
@@ -14,13 +13,13 @@ import Link from "next/link";
 export default function GaleriasPage() {
   return (
     <>
-      <PageHero title="Galerías" imageId="gallery-hero" />
+      <PageHero title="Galerías" imageId="gallery-hero" objectPosition="object-top" />
       
       <div className="container mx-auto px-4 py-24">
         <div className="text-center mb-16">
             <h2 className="font-headline text-4xl md:text-5xl font-bold">Explora Nuestro Mundo Visual</h2>
-            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-                Una selección de momentos capturados a través de nuestro lente, desde la majestuosidad de la vida silvestre hasta la emoción detrás de cámaras.
+            <p className="mt-4 text-lg text-muted-foreground max-w-3xl mx-auto">
+                Un recorrido por nuestra trayectoria visual: desde la narrativa cinematográfica de ficción hasta la contemplación profunda de la naturaleza y el registro documental.
             </p>
         </div>
 
