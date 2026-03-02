@@ -73,7 +73,7 @@ export default function Home() {
                        <Image
                         src={logo.src}
                         alt={`${logo.name} logo`}
-                        width={logo.name === 'Wikipedia' ? 120 : 100}
+                        width={100}
                         height={50}
                         className="object-contain h-12 w-auto"
                       />
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/60" />
           <div className="relative z-10 container mx-auto px-4 text-center text-white">
             <h2 className="font-headline text-3xl md:text-4xl font-bold max-w-2xl mx-auto">
-              ¿Listo para explorar aquello que late bajo la superficie?
+              ¿Listo para explorar aquello que no siempre es visible?
             </h2>
             <Button asChild size="lg" className="mt-8 bg-accent text-primary-foreground hover:bg-accent/90">
               <Link href="/contacto">Contáctanos</Link>
