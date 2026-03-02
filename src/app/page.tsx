@@ -1,11 +1,12 @@
+
 'use client';
 
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { ArrowRight, Camera, FileText, Aperture, Quote, PlayCircle } from "lucide-react";
-import { siteConfig, services, posts, productionLogos } from "@/lib/data";
+import { ArrowRight, Camera, FileText, Aperture, Quote, Music } from "lucide-react";
+import { services, posts, biography } from "@/lib/data";
 import HeroSlider from "@/components/pages/home/HeroSlider";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { TheatreIcon } from "@/components/icons";
@@ -22,7 +23,6 @@ export default function Home() {
     'Cultura': <TheatreIcon className="h-10 w-10 text-accent" />,
     'Consultoría': <FileText className="h-10 w-10 text-accent" />,
   };
-  const newBio = "Mauricio de la Maza se graduó summa cum laude con un Doctorado en Biología y Desarrollo Sustentable en la UANL; cuenta con una Maestría en administración de Empresas de la Universidad de Lancaster, Reino Unido, con programa de intercambio con ESC, Lyon, Francia, donde se especializó en Planificación Estratégica; es Ingeniero Agrónomo Zootecnista en Ingeniería Agrícola y Zootecnia del Tecnológico de Monterrey; además posee una licenciatura en Derecho con Mención Honorífica de Excelencia del TecMilenio y estudios de Maestría en Arte Cinematográfico y Multimedia en la Escuela Superior de Cine y Multimedia Ilumina.";
 
   const recognitionLogos = [
     { name: "IMDb", src: "/images/imdb.png", url: "https://www.imdb.com/es/name/nm14485536/" },
@@ -53,21 +53,23 @@ export default function Home() {
           <div className="container mx-auto px-4">
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="font-headline text-4xl font-bold mb-4">Mauricio De la Maza-Benignos</h2>
-                <div className="text-muted-foreground space-y-4">
-                  <p>{newBio}</p>
+                <p className="text-accent uppercase tracking-[0.2em] font-medium mb-2">{biography.role}</p>
+                <h2 className="font-headline text-4xl font-bold mb-6">Mauricio De la Maza-Benignos</h2>
+                <div className="text-muted-foreground space-y-4 text-lg">
+                  <p>{biography.intro}</p>
+                  <p>Su cine transita entre el documental ambiental de tono poético y educativo y la ficción de carácter introspectivo.</p>
                 </div>
-                <div className="mt-6">
+                <div className="mt-8">
                     <Image src="/images/FirmaNegro-1.png" alt="Firma de Mauricio De la Maza" width={200} height={100} />
                 </div>
-                <Button asChild variant="link" className="text-accent text-lg p-0 h-auto mt-6">
-                  <Link href="/nosotros">Leer más <ArrowRight className="ml-2 h-5 w-5" /></Link>
+                <Button asChild variant="link" className="text-accent text-lg p-0 h-auto mt-8">
+                  <Link href="/nosotros">Explorar su obra <ArrowRight className="ml-2 h-5 w-5" /></Link>
                 </Button>
               </div>
               <div className="order-1 md:order-2 flex flex-col items-center justify-center">
-                 <div className="flex flex-wrap justify-center items-center gap-6 mb-4">
+                 <div className="flex flex-wrap justify-center items-center gap-8 mb-8">
                   {recognitionLogos.map((logo) => (
-                    <Link key={logo.name} href={logo.url} target="_blank" rel="noopener noreferrer" className="transition-opacity hover:opacity-80">
+                    <Link key={logo.name} href={logo.url} target="_blank" rel="noopener noreferrer" className="transition-all hover:scale-105">
                        <Image
                         src={logo.src}
                         alt={`${logo.name} logo`}
@@ -96,7 +98,7 @@ export default function Home() {
         <section id="portfolio" className="py-12 bg-black text-white">
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
-                <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Portafolio</p>
+                <p className="text-sm uppercase tracking-widest text-gray-400 mb-2">Filmografía</p>
                 <h2 className="font-headline text-4xl md:text-5xl font-bold text-white">
                 Nuestras Producciones
                 </h2>

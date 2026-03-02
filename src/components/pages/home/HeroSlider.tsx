@@ -1,3 +1,4 @@
+
 "use client"
 
 import React from "react"
@@ -7,6 +8,7 @@ import Autoplay from "embla-carousel-autoplay"
 import useEmblaCarousel from 'embla-carousel-react'
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
+import { biography } from "@/lib/data"
 
 export default function HeroSlider() {
   const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-'));
@@ -39,11 +41,11 @@ export default function HeroSlider() {
         <h1 className="font-headline text-5xl font-bold leading-tight drop-shadow-2xl md:text-7xl lg:text-8xl">
           Visión Narrativa
         </h1>
-        <p className="mt-4 max-w-2xl text-lg text-gray-200 md:text-xl">
-          Director Audiovisual & Consultoría Creativa
+        <p className="mt-4 max-w-2xl text-lg text-gray-200 md:text-2xl tracking-wide">
+          {biography.role}
         </p>
         <Button asChild size="lg" className="mt-8 bg-accent text-lg text-primary-foreground hover:bg-accent/90">
-            <Link href="/servicios">Conoce más</Link>
+            <Link href="/nosotros">Conocer su obra</Link>
         </Button>
       </div>
     </section>
