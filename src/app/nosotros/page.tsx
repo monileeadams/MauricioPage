@@ -138,7 +138,7 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Science Section */}
+      {/* Science Section - REDESIGNED AS MOSAIC GALLERY */}
       <section className="py-24 bg-secondary overflow-hidden">
         <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
