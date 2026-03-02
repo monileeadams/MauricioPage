@@ -48,40 +48,43 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Col 3: Profesional */}
-          <div className="space-y-6">
-            <h3 className="font-headline text-xl font-semibold text-white">Profesional</h3>
-            <div className="flex flex-wrap gap-4">
-              {professionalLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-sm text-gray-400 hover:text-accent transition-colors"
-                  aria-label={social.name}
-                >
-                  <social.icon className="h-5 w-5" />
-                  <span className="hidden xl:inline">{social.name}</span>
-                </a>
-              ))}
+          {/* Col 3: Profesional & Música */}
+          <div className="space-y-8">
+            <div className="space-y-6">
+              <h3 className="font-headline text-xl font-semibold text-white">Profesional</h3>
+              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+                {professionalLinks.map((social) => (
+                  <a
+                    key={social.name}
+                    href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-sm text-gray-400 hover:text-accent transition-colors group"
+                    aria-label={social.name}
+                  >
+                    <social.icon className="h-5 w-5 transition-transform group-hover:scale-110" />
+                    <span>{social.name}</span>
+                  </a>
+                ))}
+              </div>
             </div>
-            <div className="space-y-3 pt-4">
-                <h4 className="text-xs uppercase tracking-[0.2em] text-accent font-bold">Música</h4>
-                <div className="flex gap-4">
-                    {musicLinks.map((music) => (
-                    <a
-                        key={music.name}
-                        href={music.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-gray-400 hover:text-accent transition-all"
-                        aria-label={music.name}
-                    >
-                        <music.icon className="h-5 w-5" />
-                    </a>
-                    ))}
-                </div>
+            
+            <div className="space-y-4">
+              <h4 className="text-xs uppercase tracking-[0.2em] text-accent font-bold">Música</h4>
+              <div className="flex gap-4">
+                {musicLinks.map((music) => (
+                  <a
+                    key={music.name}
+                    href={music.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-accent transition-all hover:scale-110"
+                    aria-label={music.name}
+                  >
+                    <music.icon className="h-6 w-6" />
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
 
