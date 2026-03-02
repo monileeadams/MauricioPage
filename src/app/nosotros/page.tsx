@@ -13,6 +13,7 @@ export default function NosotrosPage() {
   const fishImage = PlaceHolderImages.find((p) => p.id === 'gallery-new-6');
   const colibriImage = PlaceHolderImages.find((p) => p.id === 'service-digital');
   const filmingImage = PlaceHolderImages.find((p) => p.id === 'gallery-new-5');
+  const architectureBg = PlaceHolderImages.find((p) => p.id === 'hero-dialogos-2');
 
   return (
     <>
@@ -243,15 +244,35 @@ export default function NosotrosPage() {
         </div>
       </section>
 
-      {/* Architecture Section */}
-      <section className="py-24 bg-accent text-primary-foreground">
-        <div className="container mx-auto px-4">
+      {/* Architecture Section - Redesigned for a cinematic feel */}
+      <section className="relative py-32 overflow-hidden text-white">
+        {architectureBg && (
+          <div className="absolute inset-0">
+            <Image
+              src={architectureBg.imageUrl}
+              alt="Arquitectura unificada"
+              fill
+              className="object-cover"
+              data-ai-hint={architectureBg.imageHint}
+            />
+            <div className="absolute inset-0 bg-black/85" />
+          </div>
+        )}
+        <div className="relative z-10 container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
-                <Zap className="h-12 w-12 mx-auto mb-6 opacity-80" />
-                <h2 className="font-headline text-4xl md:text-5xl font-bold mb-8">{biography.architecture.title}</h2>
-                <div className="space-y-6 text-xl">
-                    <p className="leading-relaxed">{biography.architecture.text}</p>
-                    <p className="font-headline text-3xl font-bold pt-6">{biography.architecture.conclusion}</p>
+                <div className="w-12 h-1 bg-accent mx-auto mb-10" />
+                <h2 className="font-headline text-4xl md:text-6xl font-bold mb-10 tracking-tight">
+                    {biography.architecture.title}
+                </h2>
+                <div className="space-y-12">
+                    <p className="text-xl md:text-2xl font-light leading-relaxed text-gray-300 max-w-2xl mx-auto italic">
+                        {biography.architecture.text}
+                    </p>
+                    <div className="pt-6">
+                        <p className="font-headline text-3xl md:text-5xl font-bold text-accent">
+                            {biography.architecture.conclusion}
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
