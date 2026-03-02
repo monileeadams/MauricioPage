@@ -377,6 +377,12 @@
       "description": "Cineasta en acción para el artículo de ética documental",
       "imageUrl": "/images/etica 4.jpg",
       "imageHint": "filmmaker in action"
+    },
+    {
+      "id": "science-mauricio",
+      "description": "Mauricio de la Maza en su labor científica",
+      "imageUrl": "/images/dr1.jpg",
+      "imageHint": "scientist researcher"
     }
   ]
 }
