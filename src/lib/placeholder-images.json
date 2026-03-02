@@ -260,9 +260,9 @@
     },
     {
       "id": "cta-bg",
-      "description": "Call to action background",
-      "imageUrl": "/images/contacto.jpg",
-      "imageHint": "nature water"
+      "description": "Escena de El zapato",
+      "imageUrl": "/images/zapato2.webp",
+      "imageHint": "film set"
     },
     {
       "id": "service-audiovisual",
