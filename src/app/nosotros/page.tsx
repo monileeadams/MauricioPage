@@ -273,7 +273,7 @@ export default function NosotrosPage() {
             
             {/* Descriptive Text & Conclusion with high spacing */}
             <div className="md:col-start-6 md:col-span-6 space-y-16">
-              <p className="text-xs md:text-sm font-light leading-[1.8] text-gray-400 max-w-sm border-b border-gray-800 pb-16 tracking-wide">
+              <p className="text-sm md:text-lg font-light leading-[1.8] text-gray-300 max-w-lg border-b border-gray-800 pb-16 tracking-wide">
                 {biography.architecture.text}
               </p>
               <div className="animate-in fade-in slide-in-from-right-8 duration-1000">
