@@ -171,8 +171,8 @@
     {
       "id": "contact-hero",
       "description": "Hero image for the Contact page",
-      "imageUrl": "https://images.unsplash.com/photo-1648879266402-a8ee47f014c1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxvbGQlMjB0ZWxlcGhvbmV8ZW58MHx8fHwxNzY0NzAxMDkzfDA&ixlib.rb-4.1.0&q=80&w=1080",
-      "imageHint": "old telephone"
+      "imageUrl": "https://images.unsplash.com/39/wdXqHcTwSTmLuKOGz92L_Landscape.jpg?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw2fHxuYXR1cmUlMjBsYW5kc2NhcGV8ZW58MHx8fHwxNzcyMzYzMjMzfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "nature landscape"
     },
     {
       "id": "gallery-prologo-3",
