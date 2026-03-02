@@ -1,4 +1,3 @@
-
 'use client';
 
 import PageHero from "@/components/common/PageHero";
@@ -49,15 +48,17 @@ export default function GaleriasPage() {
                   >
                     {/* Poster Image */}
                     <div className={`lg:col-span-5 relative aspect-[2/3] max-w-md mx-auto lg:mx-0 w-full rounded-xl overflow-hidden shadow-2xl group ${index % 2 !== 0 ? 'lg:order-last' : ''}`}>
-                      <Image 
-                        src={movie.poster} 
-                        alt={movie.title} 
-                        fill 
-                        className="object-cover transition-transform duration-700 group-hover:scale-105"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
-                        <p className="text-white text-lg font-bold">{movie.title} ({movie.year})</p>
-                      </div>
+                      <Link href={`https://${movie.website}`} target="_blank" rel="noopener noreferrer">
+                        <Image 
+                          src={movie.poster} 
+                          alt={movie.title} 
+                          fill 
+                          className="object-cover transition-transform duration-700 group-hover:scale-105"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-8">
+                          <p className="text-white text-lg font-bold">{movie.title} ({movie.year})</p>
+                        </div>
+                      </Link>
                     </div>
 
                     {/* Movie Details */}

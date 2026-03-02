@@ -98,9 +98,11 @@ export default function NosotrosPage() {
                   {featuredMovies.map((movie) => (
                     <Card key={movie.id} className="bg-background border-none shadow-none group">
                       <CardContent className="p-0 space-y-4">
-                        <div className="relative aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
-                          <Image src={movie.poster} alt={movie.title} fill className="object-cover" />
-                        </div>
+                        <Link href={`https://${movie.website}`} target="_blank" rel="noopener noreferrer" className="block">
+                          <div className="relative aspect-[2/3] rounded-lg overflow-hidden shadow-lg transition-transform duration-300 group-hover:scale-105">
+                            <Image src={movie.poster} alt={movie.title} fill className="object-cover" />
+                          </div>
+                        </Link>
                         <h3 className="font-headline text-2xl font-bold text-foreground">{movie.title} ({movie.year})</h3>
                         <p className="text-sm text-accent uppercase font-bold tracking-widest">{movie.genre}</p>
                         <p className="text-muted-foreground text-sm line-clamp-3 italic">"{movie.synopsis}"</p>
