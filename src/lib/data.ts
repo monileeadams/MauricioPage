@@ -85,15 +85,15 @@ export const services: Service[] = [
   {
     title: 'Cine de Ficción y Documental',
     imageId: 'service-audiovisual',
-    summary: 'Narrativas que transitan entre el documental ambiental de tono poético y la ficción de carácter introspectivo.',
+    summary: 'Narrativas que transitan entre el documental ambiental de tono poético y la ficción de carácter introspectivo. Una búsqueda constante de aquello que late bajo la superficie a través del lenguaje cinematográfico.',
     details: [
         {
             title: "Producción Cinematográfica",
             description: "Exploramos aquello que no siempre es visible: la culpa, la memoria, el miedo y el deseo.",
             items: [
-                "Documentales ambientales de tono poético y contemplativo",
-                "Largometrajes de ficción de carácter introspectivo",
-                "Cine de autor centrado en el drama psicológico y filosófico",
+                "Documentales ambientales de tono poético",
+                "Largometrajes de ficción introspectiva",
+                "Cine de autor y drama psicológico",
                 "Narrativas de naturaleza y diversidad humana"
             ]
         }
@@ -102,87 +102,32 @@ export const services: Service[] = [
   {
     title: 'Composición y Diseño Sonoro',
     imageId: 'service-editing',
-    summary: 'La música no acompaña la imagen, la completa. Creamos atmósferas que dialogan con el conflicto interior.',
-    details: [
-        {
-            title: "Música y Sonido",
-            description: "Construimos una arquitectura sonora unificada que respira con la historia.",
-            items: [
-                "Original Scores para cine y medios audiovisuales",
-                "Composición de texturas contemporáneas y ambient",
-                "Diseño de atmósferas y tensión emocional sonora",
-                "Arquitectura dramática unificada (imagen y sonido)"
-            ]
-        }
-    ]
+    summary: 'La música no acompaña la imagen: la completa. Mauricio compone desde la tensión emocional y la atmósfera narrativa, combinando escritura orquestal minimalista, ambient y exploración experimental. Su doble rol como director y compositor permite construir una arquitectura dramática unificada desde la concepción misma del proyecto.',
+    details: []
   },
   {
     title: 'Fotografía Contemplativa',
     imageId: 'service-photography',
-    summary: 'Las imágenes no solo narran: interrogan. Capturamos aquello que late bajo la superficie.',
-     details: [
-        {
-            title: "Mirada Fotográfica",
-            description: "Búsqueda de la esencia a través de la luz y el silencio.",
-            items: [
-                "Fotografía de naturaleza y vida silvestre",
-                "Retratos que exploran la condición humana",
-                "Documentación visual de ecosistemas vulnerables",
-                "Fotografía de autor para proyectos artísticos"
-            ]
-        }
-    ]
+    summary: 'Una mirada que se detiene donde otras pasan de largo. La fotografía comparte el mismo temple del cine: la búsqueda de lo que late bajo la superficie. Ecosistemas, paisajes y retratos tratados con una sensibilidad que conjuga rigor científico y visión artística.',
+     details: []
   },
   {
     title: 'Gestión Cultural y Ética',
     imageId: 'service-culture',
-    summary: 'Proyectos que fusionan arte, pensamiento crítico y una dimensión ética para la reflexión ambiental.',
-    details: [
-        {
-            title: "Proyectos Culturales",
-            description: "Fomentamos una relación consciente entre el ser humano y su entorno.",
-            items: [
-                "Curaduría de festivales de cine con propósito",
-                "Talleres de cine de naturaleza y narrativa sensible",
-                "Conferencias sobre ética, arte y medio ambiente",
-                "Desarrollo de proyectos culturales de impacto social"
-            ]
-        }
-    ]
+    summary: 'Más de tres décadas vinculando el arte, la ciencia y la sociedad. Como Director General del Wildlife Conservation Film Festival (WCFF) desde 2023, y con trayectoria en dirección de ONG y proyectos culturales binacionales, se ofrece asesoría y liderazgo en iniciativas de alto impacto: festivales, programas educativos, producción institucional y estrategia cultural con propósito ambiental.',
+    details: []
   },
   {
     title: 'Consultoría Ambiental Estratégica',
     imageId: 'service-consulting',
-    summary: 'Asesoría experta que integra ciencia y ética para proponer soluciones conscientes de conservación.',
-    details: [
-        {
-            title: "Asesoría de Impacto",
-            description: "Mirada experta para la protección y resguardo de los derechos del medio ambiente.",
-            items: [
-                "Consultoría en conservación de biodiversidad y ecosistemas",
-                "Estrategias de desarrollo sustentable con visión ética",
-                "Asesoría técnica y legal para ONGs y sector público",
-                "Evaluación de impacto ambiental y social"
-            ]
-        }
-    ]
+    summary: 'Sustentada en una trayectoria científica y de gestión de primer nivel —WWF, Pronatura Noreste, Sistema Nacional de Investigadores—, esta consultoría combina análisis técnico, visión estratégica y experiencia en política pública. Especialidad en ecosistemas de agua dulce, biodiversidad del norte de México y desarrollo sustentable transfronterizo.',
+    details: []
   },
   {
     title: 'Dirección Creativa Narrativa',
     imageId: 'service-digital',
-    summary: 'Desarrollamos proyectos con propósito, integrando nuevas ideas para proteger el mundo natural.',
-    details: [
-        {
-            title: "Dirección y Visión",
-            description: "Acompañamos sueños y mejoras para el mundo natural a través de la creatividad.",
-            items: [
-                "Dirección creativa para contenidos de alto impacto",
-                "Estrategias de comunicación digital con base científica y artística",
-                "Producción de series web y cápsulas narrativas",
-                "Desarrollo de conceptos para proyectos de conservación"
-            ]
-        }
-    ]
+    summary: 'Para proyectos que necesitan encontrar su voz. Acompañamiento a equipos creativos, productoras y organizaciones en el desarrollo de proyectos audiovisuales: desde la concepción de la idea y el guion hasta las decisiones estéticas y narrativas durante la producción.',
+    details: []
   },
 ];
 
@@ -215,7 +160,7 @@ export const posts: Post[] = [
 <p>El monólogo nos sitúa ante una mujer que va a interactuar en el espacio con diversos elementos, uno de ellos es un maniquí que, a través de esa  relación, el lector y espectador será conducido al infierno que existe en una mente que ha sido construida por otros y no por sí misma. Y como producto de esa construcción, se ha suscitado la mutilación externa e interna del personaje. Pero, es un doble discurso al cual el lector y espectador están invitados a vivir de cerca y está basado en una de las realidades que han permanecido a través de los siglos.</p>
 <p>Y se trata de la impune y gran injusticia hacia la condición de ser mujer. Esto será importante para el lector que se enfrentará a las siguientes preguntas: ¿Qué es lo que siente esa mujer aparentemente loca? ¿Qué es lo que siente la mujer que se construye en nuestra sociedad? Es decir, se habla acerca de una condición que se ha sometido, domesticado y tratado como a una Femenina bestia de matadero o mujer para el matadero.</p>
 <img src="/images/prologo2.png" alt="Maniquí en escena" class="my-6 rounded-lg shadow-md" />
-<p>Xavier Araiza da forma a un personaje que utiliza la palabra como un recurso de escape, de denuncia y como parte de un ¡Basta! que será lanzado al lector o espectador. Por lo tanto, se le da voz a las que han sido violentadas, quemadas vivas, desaparecidas o convertidas en un objeto para uso egoísta de una mentalidad o sistema machista que cínicamente afirma que no existe tal realidad.</p>
+<p>Xavier Araiza da forma a un personaje que utiliza la palabra como un recurso de escape, de denuncia y como parte de un ¡Basta! que será lanzado al lector o espectador. Por lo tanto, se le da voz a las que han sido violentadas, quemadas vivas, desaparecidas o convertidas en un objeto para uso egoísta de una mentalidad o sistema machista que cínicamente afirma que no existe tal reality.</p>
 <p>Es por medio de la palabra como podemos ser testigos de ese descender a los infiernos del inconsciente por parte del personaje. Y será necesario el desdoblamiento de La loca del maniquí, quien ha ocultado lo que siente a través de una máscara y del silencio. Pero ¿quién es capaz de mutilar a otro ser humano y de qué manera?</p>
 <p>El autor ha realizado una radiografía a la mujer y a su entorno. Observa de cerca las acciones y pensamientos del personaje que se mantiene en el límite, entre la vida y la muerte, incluso todo el tiempo está cuestionando la existencia o el valor de la vida. Porque si algo hay que realizar como parte del análisis psicoanalítico y social es el de reconocer lo que sucede en los entornos familiares, religiosos, políticos y culturales de la Loca del maniquí. Y como es algo oculto, es a través de la palabra donde se puede reconocer la construcción que se le ha impuesto a la mujer y no al hombre o niño que nace en una familia.</p>
 <img src="/images/prologo3.png" alt="Actriz en monólogo" class="my-6 rounded-lg shadow-md" />
