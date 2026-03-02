@@ -1,3 +1,4 @@
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { PlaceHolderImages } from '@/lib/placeholder-images';
@@ -9,6 +10,8 @@ export default function NosotrosPage() {
   const bioIntroImage = PlaceHolderImages.find((p) => p.id === 'bio-intro');
   const scienceImage = PlaceHolderImages.find((p) => p.id === 'science-mauricio');
   const scienceImage2 = PlaceHolderImages.find((p) => p.id === 'blog-honoris-causa-cover');
+  const wcffLogo = PlaceHolderImages.find((p) => p.id === 'wcff-logo');
+  const fishImage = PlaceHolderImages.find((p) => p.id === 'gallery-new-6');
 
   return (
     <>
@@ -137,7 +140,7 @@ export default function NosotrosPage() {
       <section className="py-24 bg-secondary overflow-hidden">
         <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
-                <div className="grid lg:grid-cols-12 gap-16 items-center">
+                <div className="grid lg:grid-cols-12 gap-16 items-start">
                     <div className="lg:col-span-7 space-y-6">
                         <div className="flex items-center gap-4 mb-4">
                             <Microscope className="h-10 w-10 text-accent" />
@@ -150,10 +153,10 @@ export default function NosotrosPage() {
                             ))}
                         </div>
                     </div>
-                    <div className="lg:col-span-5 grid grid-cols-1 gap-8">
-                        <div className="flex flex-col gap-8 md:flex-row lg:flex-col">
+                    <div className="lg:col-span-5 grid grid-cols-2 gap-4">
+                        <div className="space-y-4">
                             {scienceImage && (
-                                <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-2xl">
+                                <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden shadow-xl">
                                     <Image
                                         src={scienceImage.imageUrl}
                                         alt={scienceImage.description}
@@ -163,14 +166,38 @@ export default function NosotrosPage() {
                                     />
                                 </div>
                             )}
+                            {wcffLogo && (
+                                <div className="relative aspect-[2/3] w-full rounded-lg overflow-hidden shadow-xl">
+                                    <Image
+                                        src={wcffLogo.imageUrl}
+                                        alt={wcffLogo.description}
+                                        fill
+                                        className="object-contain bg-white/50 p-4"
+                                        data-ai-hint={wcffLogo.imageHint}
+                                    />
+                                </div>
+                            )}
+                        </div>
+                        <div className="space-y-4 pt-12">
                             {scienceImage2 && (
-                                <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-2xl lg:-ml-12 lg:mt-4 z-10">
+                                <div className="relative aspect-[4/5] w-full rounded-lg overflow-hidden shadow-xl">
                                     <Image
                                         src={scienceImage2.imageUrl}
                                         alt={scienceImage2.description}
                                         fill
                                         className="object-cover"
                                         data-ai-hint={scienceImage2.imageHint}
+                                    />
+                                </div>
+                            )}
+                            {fishImage && (
+                                <div className="relative aspect-[4/3] w-full rounded-lg overflow-hidden shadow-xl">
+                                    <Image
+                                        src={fishImage.imageUrl}
+                                        alt={fishImage.description}
+                                        fill
+                                        className="object-cover"
+                                        data-ai-hint={fishImage.imageHint}
                                     />
                                 </div>
                             )}

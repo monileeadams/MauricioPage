@@ -383,6 +383,12 @@
       "description": "Mauricio de la Maza en su labor científica",
       "imageUrl": "/images/dr1.jpg",
       "imageHint": "scientist researcher"
+    },
+    {
+      "id": "wcff-logo",
+      "description": "Wildlife Conservation Film Festival Poster",
+      "imageUrl": "/images/Wildligeconservation.png",
+      "imageHint": "festival poster"
     }
   ]
 }
