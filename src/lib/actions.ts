@@ -1,6 +1,10 @@
+
 "use server";
 
 import { z } from "zod";
+import { Resend } from 'resend';
+
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 const contactSchema = z.object({
   name: z.string().min(2, "El nombre es demasiado corto"),
@@ -36,21 +40,38 @@ export async function submitContactForm(
     };
   }
 
+  const { name, email, phone, company, service, message } = validatedFields.data;
+
   try {
-    // Here you would typically send an email
-    console.log("Form data received:", validatedFields.data);
-    
-    // Simulate email sending
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    // Envío del correo usando Resend
+    // Nota: onboarding@resend.dev solo funciona para enviar correos a tu propia cuenta verificada.
+    // Para producción, deberás verificar tu dominio en Resend.
+    await resend.emails.send({
+      from: 'Contacto Web <onboarding@resend.dev>',
+      to: ['mauriciodelamaza70@gmail.com'],
+      subject: `Nuevo mensaje de contacto: ${service}`,
+      text: `
+        Has recibido un nuevo mensaje desde el sitio web Terra Vision:
+
+        Nombre: ${name}
+        Email: ${email}
+        Teléfono: ${phone || 'No proporcionado'}
+        Empresa: ${company || 'No proporcionada'}
+        Servicio de interés: ${service}
+
+        Mensaje:
+        ${message}
+      `,
+    });
 
     return {
-      message: "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto.",
+      message: "¡Gracias por tu mensaje! El correo ha sido enviado correctamente.",
       success: true,
     };
   } catch (error) {
-    console.error("Error sending message:", error);
+    console.error("Error al enviar el correo:", error);
     return {
-      message: "Ocurrió un error al enviar tu mensaje. Por favor, intenta de nuevo.",
+      message: "Ocurrió un error al enviar tu mensaje. Por favor, intenta de nuevo más tarde.",
       success: false,
     };
   }
