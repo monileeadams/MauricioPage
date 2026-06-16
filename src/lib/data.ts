@@ -3,7 +3,7 @@ import { Facebook, Instagram, Linkedin, Youtube, Globe, Film, Award, BookOpen } 
 import { TheatreIcon, VimeoIcon, WhatsAppIcon, IMDbIcon, WikipediaIcon, SpotifyIcon, AppleMusicIcon, BandcampIcon } from '@/components/icons';
 
 export const siteConfig = {
-  name: 'Terra Vision',
+  name: 'Mauricio de la Maza Benignos',
   url: 'https://terravision.example.com',
   ogImage: 'https://terravision.example.com/og.jpg',
   description: 'Producción audiovisual y consultoría ambiental por Mauricio De la Maza-Benignos.',
