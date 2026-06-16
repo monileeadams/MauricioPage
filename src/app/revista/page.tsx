@@ -1,3 +1,7 @@
+
+'use client';
+
+import { useState, useMemo } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import PageHero from "@/components/common/PageHero";
@@ -5,11 +9,32 @@ import { posts } from "@/lib/data";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { Search, ArrowRight, Users } from "lucide-react";
+import { Search, ArrowRight, Users, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function RevistaPage() {
+    const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
+    const [searchQuery, setSearchQuery] = useState("");
+
     const categories = ['Noticias', 'Artículos', 'Entrevistas'];
+
+    const filteredPosts = useMemo(() => {
+        return posts.filter(post => {
+            const matchesCategory = selectedCategory ? post.category === selectedCategory : true;
+            const matchesSearch = post.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
+                                 post.excerpt.toLowerCase().includes(searchQuery.toLowerCase());
+            return matchesCategory && matchesSearch;
+        });
+    }, [selectedCategory, searchQuery]);
+
+    const handleCategoryClick = (category: string) => {
+        if (selectedCategory === category) {
+            setSelectedCategory(null); // Deseleccionar si se hace clic de nuevo
+        } else {
+            setSelectedCategory(category);
+        }
+    };
 
     return (
         <>
@@ -19,38 +44,71 @@ export default function RevistaPage() {
                 <div className="grid lg:grid-cols-12 gap-12">
                     {/* Main content - posts */}
                     <div className="lg:col-span-8">
-                        <div className="grid sm:grid-cols-2 gap-8">
-                            {posts.map((post) => {
-                                const postImage = PlaceHolderImages.find(p => p.id === post.imageId);
-                                return (
-                                <Card key={post.id} className="overflow-hidden group flex flex-col h-full bg-card">
-                                    {postImage && (
-                                    <div className="aspect-video overflow-hidden">
-                                        <Image
-                                            src={postImage.imageUrl}
-                                            alt={post.title}
-                                            width={600}
-                                            height={400}
-                                            className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                                            data-ai-hint={postImage.imageHint}
-                                        />
-                                    </div>
-                                    )}
-                                    <div className="p-6 flex flex-col flex-grow">
-                                        <div className="flex items-center justify-between mb-2">
-                                            <span className="text-xs uppercase tracking-widest text-accent font-bold">{post.category}</span>
-                                            <p className="text-xs text-muted-foreground">{post.date}</p>
-                                        </div>
-                                        <CardTitle className="font-headline text-xl mt-1 leading-snug">{post.title}</CardTitle>
-                                        <p className="text-muted-foreground mt-4 text-sm line-clamp-3 flex-grow">{post.excerpt}</p>
-                                        <Button asChild variant="link" className="text-accent p-0 h-auto mt-6 self-start text-sm font-bold uppercase tracking-wider">
-                                            <Link href={`/revista/${post.slug}`}>Leer artículo completo <ArrowRight className="ml-2 h-4 w-4" /></Link>
-                                        </Button>
-                                    </div>
-                                </Card>
-                                );
-                            })}
+                        <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+                            <h2 className="font-headline text-3xl font-bold">
+                                {selectedCategory ? `Categoría: ${selectedCategory}` : 'Todas las publicaciones'}
+                                <span className="text-muted-foreground text-lg ml-2 font-normal">({filteredPosts.length})</span>
+                            </h2>
+                            {selectedCategory && (
+                                <Button 
+                                    variant="ghost" 
+                                    size="sm" 
+                                    onClick={() => setSelectedCategory(null)}
+                                    className="text-accent hover:text-accent/80"
+                                >
+                                    <X className="mr-2 h-4 w-4" /> Limpiar filtro
+                                </Button>
+                            )}
                         </div>
+
+                        {filteredPosts.length > 0 ? (
+                            <div className="grid sm:grid-cols-2 gap-8">
+                                {filteredPosts.map((post) => {
+                                    const postImage = PlaceHolderImages.find(p => p.id === post.imageId);
+                                    return (
+                                    <Card key={post.id} className="overflow-hidden group flex flex-col h-full bg-card">
+                                        {postImage && (
+                                        <div className="aspect-video overflow-hidden">
+                                            <Image
+                                                src={postImage.imageUrl}
+                                                alt={post.title}
+                                                width={600}
+                                                height={400}
+                                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                                                data-ai-hint={postImage.imageHint}
+                                            />
+                                        </div>
+                                        )}
+                                        <div className="p-6 flex flex-col flex-grow">
+                                            <div className="flex items-center justify-between mb-2">
+                                                <span className="text-xs uppercase tracking-widest text-accent font-bold">{post.category}</span>
+                                                <p className="text-xs text-muted-foreground">{post.date}</p>
+                                            </div>
+                                            <CardTitle className="font-headline text-xl mt-1 leading-snug">{post.title}</CardTitle>
+                                            <p className="text-muted-foreground mt-4 text-sm line-clamp-3 flex-grow">{post.excerpt}</p>
+                                            <Button asChild variant="link" className="text-accent p-0 h-auto mt-6 self-start text-sm font-bold uppercase tracking-wider">
+                                                <Link href={`/revista/${post.slug}`}>Leer artículo completo <ArrowRight className="ml-2 h-4 w-4" /></Link>
+                                            </Button>
+                                        </div>
+                                    </Card>
+                                    );
+                                })}
+                            </div>
+                        ) : (
+                            <div className="text-center py-20 bg-secondary rounded-xl">
+                                <p className="text-xl text-muted-foreground">No se encontraron artículos que coincidan con tu búsqueda.</p>
+                                <Button 
+                                    variant="outline" 
+                                    className="mt-4 border-accent text-accent"
+                                    onClick={() => {
+                                        setSelectedCategory(null);
+                                        setSearchQuery("");
+                                    }}
+                                >
+                                    Ver todas las publicaciones
+                                </Button>
+                            </div>
+                        )}
                     </div>
 
                     {/* Sidebar */}
@@ -62,6 +120,8 @@ export default function RevistaPage() {
                                 <Input 
                                     placeholder="Buscar artículos..." 
                                     className="pr-10 bg-background" 
+                                    value={searchQuery}
+                                    onChange={(e) => setSearchQuery(e.target.value)}
                                     suppressHydrationWarning
                                 />
                                 <Search className="absolute right-3 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
@@ -100,9 +160,15 @@ export default function RevistaPage() {
                             <ul className="space-y-3">
                                 {categories.map(category => (
                                      <li key={category}>
-                                        <Link href="#" className="flex items-center text-sm text-muted-foreground hover:text-accent transition-colors font-medium">
-                                           <ArrowRight className="h-4 w-4 mr-2 text-accent"/> {category}
-                                        </Link>
+                                        <button 
+                                            onClick={() => handleCategoryClick(category)}
+                                            className={cn(
+                                                "flex items-center text-sm transition-colors font-medium w-full text-left",
+                                                selectedCategory === category ? "text-accent" : "text-muted-foreground hover:text-accent"
+                                            )}
+                                        >
+                                           <ArrowRight className={cn("h-4 w-4 mr-2", selectedCategory === category ? "text-accent" : "text-accent/40")}/> {category}
+                                        </button>
                                     </li>
                                 ))}
                             </ul>
