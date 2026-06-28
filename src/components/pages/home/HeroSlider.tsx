@@ -15,7 +15,7 @@ import { cn } from "@/lib/utils"
 export default function HeroSlider() {
   const heroImages = PlaceHolderImages.filter(p => p.id.startsWith('hero-'));
 
-  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 60 }, [
+  const [emblaRef] = useEmblaCarousel({ loop: true, duration: 120 }, [
     Autoplay({ delay: 5000, stopOnInteraction: false }),
     Fade(),
   ]);
