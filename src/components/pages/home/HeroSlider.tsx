@@ -19,7 +19,7 @@ export default function HeroSlider() {
   ]);
 
   return (
-    <section className="relative h-[85vh] w-full text-white">
+    <section className="relative h-[85vh] w-full overflow-hidden text-white">
       <div className="overflow-hidden h-full" ref={emblaRef}>
         <div className="flex h-full">
           {heroImages.map((heroImage, index) => {
@@ -59,6 +59,21 @@ export default function HeroSlider() {
         <Button asChild size="lg" className="mt-8 bg-accent text-lg text-primary-foreground hover:bg-accent/90">
             <Link href="/nosotros">Conocer su obra</Link>
         </Button>
+      </div>
+
+      {/* Curva inferior */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 z-20 leading-[0]">
+        <svg
+          className="block h-[60px] w-full md:h-[90px] lg:h-[120px]"
+          viewBox="0 0 1440 120"
+          preserveAspectRatio="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0,0 C360,50 1080,50 1440,0 L1440,120 L0,120 Z"
+            className="fill-background"
+          />
+        </svg>
       </div>
     </section>
   )
