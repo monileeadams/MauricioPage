@@ -5,6 +5,7 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link";
 import Autoplay from "embla-carousel-autoplay"
+import Fade from "embla-carousel-fade"
 import useEmblaCarousel from 'embla-carousel-react'
 import { PlaceHolderImages } from "@/lib/placeholder-images"
 import { Button } from "@/components/ui/button"
@@ -16,6 +17,7 @@ export default function HeroSlider() {
 
   const [emblaRef] = useEmblaCarousel({ loop: true }, [
     Autoplay({ delay: 5000, stopOnInteraction: false }),
+    Fade(),
   ]);
 
   return (
